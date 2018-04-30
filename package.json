@@ -1,0 +1,10 @@
+{
+  "name": "ddp",
+  "version": "0.0.0",
+  "description": "Sitio web para Detrás del Pixel",
+  "main": "index.js",
+  "repository": "git@github.com:afk-mcz/ddp.git",
+  "author": "afk <afk@ellugar.co>",
+  "license": "MIT",
+  "private": false
+}
