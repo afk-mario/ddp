@@ -1,0 +1,46 @@
+@import './variables.css';
+
+.main-about {
+}
+
+.main-about .wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--double-margin) auto;
+  background: white;
+}
+
+.main-about img {
+  width: 50%;
+  /* opacity: 0; */
+  /* background: var(--dark-gray); */
+}
+
+.main-about .description {
+  color: var(--dark-gray);
+  display: block;
+  flex: 1 0 auto;
+  font-size: 2em;
+  padding: var(--margin);
+  width: calc(50% - var(--margin));
+}
+
+.main-about .description h1 {
+  margin: 0;
+  display: inline;
+  font-size: 1.2em;
+}
+
+.main-about .description a {
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 4px solid var(--light-gray);
+  color: var(--black);
+  transition: all 0.2s ease;
+}
+
+.main-about .description a:hover {
+  border-color: black;
+}

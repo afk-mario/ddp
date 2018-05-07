@@ -1,0 +1,13 @@
+:root {
+  --wrapper-width: 85%;
+  --margin: 20px;
+  --half-margin: calc(20px / 2);
+  --double-margin: calc(20px * 2);
+
+  --max-width: 800px;
+
+  --black: #000000;
+  --white: #ffffff;
+  --light-gray: #e3e3e3;
+  --dark-gray: #1d1d1d;
+}

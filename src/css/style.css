@@ -1,0 +1,35 @@
+@import './variables.css';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--dark-gray);
+  background: var(--white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  color: black;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+main {
+}
+
+.wrapper {
+  width: var(--wrapper-width);
+  max-width: var(--max-width);
+}

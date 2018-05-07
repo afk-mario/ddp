@@ -1,0 +1,39 @@
+@import './variables.css';
+
+.episode-single {
+  width: 100%;
+  margin: 0 0 var(--double-margin) 0;
+}
+
+.episode-single:not(:first-child) {
+  padding-top: var(--double-margin);
+  border-top: 4px solid var(--light-gray);
+}
+
+.episode-single .wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.episode-single.active {
+  width: calc(100% + var(--margin));
+  padding: var(--half-margin);
+  background: var(--white);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.33);
+  margin: 0 0 var(--margin) calc(-1 * var(--half-margin));
+  border: none;
+}
+
+.episode-single.active + .episode-single {
+  padding-top: var(--margin);
+  border: none;
+}
+
+.episode-cover {
+  width: 20%;
+  margin-right: var(--margin);
+}
+
+.episode-single.active .episode-cover {
+  width: 30%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body class="container">
+
+        <header>
+            <% include ../partials/header %>
+        </header>
+
+        <main>
+            <section class="main-about">
+                <div class="wrapper">
+                    <img class="logo" src="<%= podcast.image %>" alt="cover">
+                    <div class="description">
+                        <h1><%= podcast.title %></h1> es un podcast conducido por <a href="">Mario Carballo Zama</a> y es <a href="/acerca-de">acerca</a>.
+                    </div>
+                </div>
+            </section>
+            <section class="episode-list">
+                <% list.forEach(function(episode, i){ %>
+                    <%- include('../partials/episode-single', {episode: episode, className: i === 0 ? 'active' : ''}); %>
+                <% }); %>
+            </section>
+        </main>
+
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+
+    </body>
+</html>

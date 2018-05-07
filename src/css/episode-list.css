@@ -1,0 +1,7 @@
+.episode-list {
+  width: var(--wrapper-width);
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}

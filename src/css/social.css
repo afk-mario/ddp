@@ -1,0 +1,24 @@
+@import './variables.css';
+
+.social {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.social a {
+  text-decoration: none;
+  color: var(--light-gray);
+  transition: all 0.2s ease;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.social li:not(:last-child) {
+  margin-right: var(--margin);
+}
+
+.social a:hover {
+  color: var(--dark-gray);
+  transform: translateY(-1px);
+}
