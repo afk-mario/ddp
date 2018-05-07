@@ -5,8 +5,10 @@
         </div>
         <div class="episode-info">
             <h2><%= episode.title %></h2>
+        </div>
+        <div class="episode-description">
             <div class="rich-text">
-                <%= episode.text %>
+                <%- episode.md %>
             </div>
         </div>
     </div>

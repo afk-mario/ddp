@@ -8,6 +8,16 @@
 
   --black: #000000;
   --white: #ffffff;
-  --light-gray: #e3e3e3;
+  --light-gray: #e8e8e8;
   --dark-gray: #1d1d1d;
+
+  --highlight-yellow: #fff200;
+  --highlight-pink: #ff3168;
+  --highlight-blue: #00a5ff;
+
+  --highlight: var(--highlight-yellow);
+  --highlight-soft: rgba(245, 255, 0, 0.5);
+
+  --header-background-opacity: 0;
+  --nav-opacity: 0;
 }

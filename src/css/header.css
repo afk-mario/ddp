@@ -1,5 +1,10 @@
 #header {
-  margin: 0 0 var(--margin);
+  /* margin: 0 0 var(--margin); */
+  background: rgba(255, 255, 255, var(--header-background-opacity));
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 #header .wrapper {
@@ -13,10 +18,14 @@
 }
 
 #header .mini-logo {
-  width: 40px;
+  width: 35px;
   height: auto;
   display: block;
   margin: 0;
+}
+
+#header nav {
+  opacity: var(--nav-opacity);
 }
 
 #header nav ul {

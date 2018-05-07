@@ -2,6 +2,9 @@
 
 const express = require('express');
 const got = require('got');
+const Remarkable = require('remarkable');
+
+const md = new Remarkable();
 
 const router = express.Router();
 const API_URL = 'https://api.ellugar.co/podcast/json/';
@@ -19,7 +22,9 @@ router.get('/', async (req, res) => {
     const podcastRequest = await got(API_SINGLE, { json: true });
     const listRequest = await got(API_LIST, { json: true });
     const podcast = podcastRequest.body;
-    const list = listRequest.body.reverse();
+    const list = listRequest.body
+      .reverse()
+      .map(episode => Object.assign(episode, { md: md.render(episode.text) }));
     const single = list[0];
     const context = { ...DEFAULT_META, podcast, list, single };
 

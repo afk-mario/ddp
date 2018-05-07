@@ -1,0 +1,171 @@
+.rich-text {
+  max-width: var(--max-width);
+  font-size: 1em;
+  margin: auto;
+}
+
+.rich-text > :first-child {
+  margin-top: var(--margin);
+}
+
+.rich-text > :last-child {
+  margin-bottom: 0px;
+}
+
+.rich-text.no-margin > :first-child {
+  margin-top: 0px;
+}
+
+.rich-text *::selection {
+  color: var(--color1);
+  background: var(--highlight-soft);
+}
+
+.rich-text *::-moz-selection {
+  color: var(--color1);
+  background: var(--highlight-soft);
+}
+
+.rich-text ul {
+  margin: var(--margin) 0 var(--margin) 0;
+  list-style: none;
+  padding: 0;
+}
+
+.rich-text ul li {
+  font-size: 1em;
+  max-width: var(--max-text-width);
+  line-height: 1.8em;
+  margin: 0 0 var(--half-margin) 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.rich-text ul li:before {
+  content: '- ';
+}
+
+.rich-text ul li a {
+  font-size: 1em;
+}
+
+.rich-text ul li p {
+  display: inline;
+  font-size: 1em;
+}
+
+.rich-text h1 {
+  width: 100%;
+  text-align: left;
+}
+
+.rich-text h2 {
+  margin: 10px 0 10px 0;
+}
+
+.rich-text h3 {
+  width: 100%;
+}
+
+.rich-text p a {
+  font-size: 1em;
+}
+
+.rich-text p:first-child img {
+  display: none;
+}
+
+.rich-text blockquote {
+  font-style: italic;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  margin-bottom: var(--margin);
+  border-left: 2px solid var(--highlight-blue);
+}
+
+.rich-text blockquote p {
+  color: $gray3;
+  margin: 0;
+}
+
+.rich-text pre {
+  background-color: var(--gray1);
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  margin: var(--margin) auto var(--margin) auto;
+  border-left: 2px solid var(--highlight-blue);
+}
+
+.rich-text pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
+}
+
+.rich-text hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border-color: var(--highlight-blue);
+}
+
+.rich-text code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap;
+}
+
+.rich-text img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.rich-text a {
+  color: var(--color1);
+  box-sizing: border-box;
+  position: relative;
+  background: $gray1;
+  z-index: 2;
+}
+
+.rich-text a::before {
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  background: var(--gray1);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transition: all 0.2s ease;
+}
+
+.rich-text a:hover,
+.rich-text a.active {
+  color: var(--color1);
+}
+
+.rich-text a:hover::before,
+.rich-text a.active::before {
+  width: 100%;
+  background: var(--highlight-soft);
+}
+
+@media screen and (max-width: 40em) {
+  .rich-text ul li {
+    width: 100%;
+  }
+  .rich-text h1 {
+    font-size: 1.4em;
+  }
+  .rich-text h2 {
+    font-size: 1.2em;
+  }
+  .rich-text h3 {
+    font-size: 1.1em;
+  }
+}

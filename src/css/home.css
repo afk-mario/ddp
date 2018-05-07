@@ -1,6 +1,7 @@
 @import './variables.css';
 
 .main-about {
+  margin-top: 75px;
 }
 
 .main-about .wrapper {
@@ -43,4 +44,14 @@
 
 .main-about .description a:hover {
   border-color: black;
+}
+
+@media screen and (max-width: 40em) {
+  .main-about img {
+    width: 100%;
+  }
+
+  .main-about .description {
+    width: 100%;
+  }
 }
