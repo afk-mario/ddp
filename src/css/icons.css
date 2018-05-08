@@ -1,0 +1,27 @@
+a i {
+  color: var(--light-gray);
+  margin-right: var(--half-margin);
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-shadow: none;
+  /* font-size: 0.9em; */
+}
+
+a:hover i {
+  color: var(--dark-gray);
+}
+
+.download:hover i {
+  /* color: var(--highlight-yellow); */
+}
+
+.listen:hover i {
+  /* color: var(--highlight-pink); */
+}
+
+.rss:hover i {
+  color: var(--highlight-pink);
+}
+
+.itunes:hover i {
+  color: var(--highlight-blue);
+}

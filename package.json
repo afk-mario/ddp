@@ -14,6 +14,7 @@
     "build:dev": "webpack --watch --progress --mode=development",
     "build:prod": "webpack -p",
     "precommit": "lint-staged",
+    "deploy": "now --public --alias",
     "test": ""
   },
   "lint-staged": {

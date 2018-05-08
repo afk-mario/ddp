@@ -14,6 +14,10 @@
   display: inline-block;
 }
 
+.social a i {
+  margin: 0;
+}
+
 .social li:not(:last-child) {
   margin-right: var(--margin);
 }
@@ -21,4 +25,10 @@
 .social a:hover {
   color: var(--dark-gray);
   transform: translateY(-1px);
+}
+
+@media screen and (max-width: 30em) {
+  .social li:not(:last-child) {
+    margin-right: var(--half-margin);
+  }
 }

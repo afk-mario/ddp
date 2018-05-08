@@ -4,26 +4,33 @@
         <% include ../partials/head %>
     </head>
     <body class="container">
-        <% include ../partials/header %>
+        <%- include('../partials/header', { podcast: podcast }); %>
         <main>
             <section id="parallax-bg-first" class="main-about">
                 <div class="wrapper">
-                    <img class="logo" src="<%= podcast.image %>" alt="cover">
+                    <img class="logo" src="<%= podcast.image %>" alt="Detrás del Pixel">
                     <div class="description">
-                        <h1><%= podcast.title %></h1> es un podcast conducido por <a href="">Mario Carballo Zama</a> y es <a href="/acerca-de">acerca</a>.
+                        <p>
+                            <h1><%= podcast.title %></h1> es un podcast conducido por <a href="">Mario Carballo Zama</a> y es <a href="/acerca-de">acerca</a>.
+                        </p>
+                        <p>
+                            Y puedes escucharlo en <a rel="noopener noreferrer" target="_blank" href="http://feeds.ellugar.co/detras-del-pixel" class="itunes">
+                                iTunes</a>, o suscribirte por <a rel="noopener noreferrer" target="_blank" href="http://feeds.ellugar.co/detras-del-pixel" class="rss">rss</a>
+                        </p>
                     </div>
                 </div>
             </section>
             <section class="episode-list">
                 <% list.forEach(function(episode, i){ %>
-                    <%- include('../partials/episode-single', {episode: episode, className: i === 0 ? 'active' : ''}); %>
+                    <%- include('../partials/episode-single', {
+                        episode: episode,
+                        className: i === 0 ? 'active' : '',
+                        podcast: podcast
+                    }); %>
                 <% }); %>
             </section>
         </main>
 
-        <footer>
-            <% include ../partials/footer %>
-        </footer>
-
+        <%- include('../partials/footer', { podcast: podcast }); %>
     </body>
 </html>

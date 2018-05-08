@@ -5,6 +5,7 @@
   width: 100%;
   top: 0;
   z-index: 100;
+  padding: var(--half-margin);
 }
 
 #header .wrapper {
@@ -40,7 +41,7 @@
 
 #header nav a {
   text-decoration: none;
-  color: var(--light-gray);
+  color: var(--gray);
   transition: all 0.2s ease;
   font-size: 1.2em;
   display: inline-block;
@@ -49,4 +50,33 @@
 #header a:hover {
   color: var(--dark-gray);
   transform: translateY(-2px);
+  text-shadow: none;
+}
+
+@media screen and (max-width: 30em) {
+  #header {
+    font-size: 0.85em;
+  }
+
+  #header .wrapper {
+    width: 100%;
+  }
+
+  #header .mini-logo {
+    width: 30px;
+  }
+
+  #header nav li:not(:last-child) {
+    margin-right: var(--half-margin);
+  }
+}
+
+@media screen and (max-width: 25em) {
+  #header {
+    font-size: 0.7em;
+  }
+
+  #header .mini-logo {
+    width: 25px;
+  }
 }

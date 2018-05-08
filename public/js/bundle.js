@@ -3073,6 +3073,16 @@
         /***/
       },
 
+    /***/ './src/css/footer.css':
+      /*!****************************!*\
+  !*** ./src/css/footer.css ***!
+  \****************************/
+      /*! no static exports found */
+      /***/ function(module, exports) {
+        // removed by extract-text-webpack-plugin
+        /***/
+      },
+
     /***/ './src/css/header.css':
       /*!****************************!*\
   !*** ./src/css/header.css ***!
@@ -3087,6 +3097,26 @@
       /*!**************************!*\
   !*** ./src/css/home.css ***!
   \**************************/
+      /*! no static exports found */
+      /***/ function(module, exports) {
+        // removed by extract-text-webpack-plugin
+        /***/
+      },
+
+    /***/ './src/css/icons.css':
+      /*!***************************!*\
+  !*** ./src/css/icons.css ***!
+  \***************************/
+      /*! no static exports found */
+      /***/ function(module, exports) {
+        // removed by extract-text-webpack-plugin
+        /***/
+      },
+
+    /***/ './src/css/listen-on.css':
+      /*!*******************************!*\
+  !*** ./src/css/listen-on.css ***!
+  \*******************************/
       /*! no static exports found */
       /***/ function(module, exports) {
         // removed by extract-text-webpack-plugin
@@ -3158,7 +3188,7 @@
           );
 
           var handleClick = function handleClick(e) {
-            e.preventDefault();
+            /* e.preventDefault(); */
             var active = document.querySelector('.active');
             if (active) {
               active.classList.remove('active');
@@ -3169,7 +3199,7 @@
               block: 'start',
               inline: 'end',
             });
-            window.scrollBy(0, -50);
+            window.scrollBy(0, -75);
           };
 
           episodes.forEach(function(node) {
@@ -3306,13 +3336,21 @@
 
         __webpack_require__(/*! ../css/style.css */ './src/css/style.css');
 
+        __webpack_require__(/*! ../css/icons.css */ './src/css/icons.css');
+
         __webpack_require__(
           /*! ../css/rich-text.css */ './src/css/rich-text.css',
         );
 
         __webpack_require__(/*! ../css/header.css */ './src/css/header.css');
 
+        __webpack_require__(/*! ../css/footer.css */ './src/css/footer.css');
+
         __webpack_require__(/*! ../css/social.css */ './src/css/social.css');
+
+        __webpack_require__(
+          /*! ../css/listen-on.css */ './src/css/listen-on.css',
+        );
 
         __webpack_require__(/*! ../css/home.css */ './src/css/home.css');
 

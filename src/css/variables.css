@@ -8,8 +8,10 @@
 
   --black: #000000;
   --white: #ffffff;
+  --super-light-gray: whitesmoke;
   --light-gray: #e8e8e8;
   --dark-gray: #1d1d1d;
+  --gray: #a8a8a8;
 
   --highlight-yellow: #fff200;
   --highlight-pink: #ff3168;
@@ -19,5 +21,40 @@
   --highlight-soft: rgba(245, 255, 0, 0.5);
 
   --header-background-opacity: 0;
+  --footer-background-opacity: 1;
   --nav-opacity: 0;
+
+  --gradient-pink-blue: linear-gradient(
+    54deg,
+    rgba(255, 49, 104, 1) 0%,
+    rgba(0, 165, 255, 1) 100%
+  );
+
+  --gradient-blue-pink: linear-gradient(
+    30deg,
+    rgba(0, 165, 255, 1) 0%,
+    rgba(255, 49, 104, 1) 100%
+  );
+
+  --gradient-ddp: linear-gradient(
+    90deg,
+    rgba(255, 54, 106, 1) 0%,
+    rgba(255, 54, 106, 1) 10%,
+    rgba(251, 255, 0, 1) 10%,
+    rgba(251, 255, 0, 1) 20%,
+    rgba(0, 174, 255, 1) 20%,
+    rgba(0, 174, 255, 1) 30%,
+    rgba(29, 29, 29, 1) 30%
+  );
+
+  --gradient-ddp-small: linear-gradient(
+    90deg,
+    rgba(255, 54, 106, 1) 0%,
+    rgba(255, 54, 106, 1) 7%,
+    rgba(251, 255, 0, 1) 7%,
+    rgba(251, 255, 0, 1) 13%,
+    rgba(0, 174, 255, 1) 13%,
+    rgba(0, 174, 255, 1) 20%,
+    rgba(29, 29, 29, 1) 20%
+  );
 }

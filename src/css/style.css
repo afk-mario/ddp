@@ -24,12 +24,31 @@ img {
   color: black;
   font-weight: 600;
   text-align: center;
+  overflow: hidden;
 }
 
 main {
+  margin: 75px 0 25px 0;
 }
 
 .wrapper {
   width: var(--wrapper-width);
   max-width: var(--max-width);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 40em) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .hide-desktop {
+    display: none !important;
+  }
 }

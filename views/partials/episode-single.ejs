@@ -1,10 +1,39 @@
 <div class="episode-single <%= className %>">
     <div class="wrapper">
         <div class="episode-cover">
-            <img src="<%= episode.image %>" alt="cover">
+            <img src="<%= episode.image %>" alt="<%= episode.slug %>">
         </div>
         <div class="episode-info">
             <h2><%= episode.title %></h2>
+            <div class="episode-links">
+                <a 
+                    href="https://ellugar.co/podcasts/detras-del-pixel/<%= episode.slug %>"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="listen"
+                    >
+                    <i class="fas fa-volume-up hide-mobile"></i>escucha</a>
+                <a 
+                    href="<%= episode.audio_ogg %>"
+                    download="<%= episode.title %>.ogg"
+                    class="download"
+                    >
+                    <i class="fas fa-cloud-download-alt hide-mobile"></i>descarga</a>
+                <a
+                    href="<%= podcast.feedBurner %>"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="rss"
+                    >
+                    <i class="fas fa-rss hide-mobile"></i>rss</a>
+                <a
+                    href="<%= podcast.iTunesURL %>"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="itunes"
+                    >
+                    <i class="fas fa-podcast hide-mobile"></i>iTunes</a>
+            </div>
         </div>
         <div class="episode-description">
             <div class="rich-text">

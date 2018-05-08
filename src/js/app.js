@@ -10,7 +10,7 @@ ready(() => {
   const episodes = Array.from(document.querySelectorAll('.episode-single'));
 
   const handleClick = e => {
-    e.preventDefault();
+    /* e.preventDefault(); */
     const active = document.querySelector('.active');
     if (active) {
       active.classList.remove('active');
@@ -21,7 +21,7 @@ ready(() => {
       block: 'start',
       inline: 'end',
     });
-    window.scrollBy(0, -50);
+    window.scrollBy(0, -75);
   };
 
   episodes.forEach(node => {

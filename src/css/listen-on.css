@@ -1,0 +1,28 @@
+@import './variables.css';
+
+.listen-on {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.listen-on a {
+  text-decoration: none;
+  color: var(--gray);
+  transition: color 0.2s ease, transform 0.2s ease;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.listen-on li:not(:last-child) {
+  margin-right: var(--margin);
+}
+
+.listen-on a:hover {
+  color: var(--dark-gray);
+  transform: translateY(-1px);
+  text-shadow: none;
+}
