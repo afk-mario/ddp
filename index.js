@@ -18,6 +18,8 @@ const routes = require('./routes');
 
 const publicPath = path.resolve(__dirname, './public');
 
+app.set('views', path.resolve(__dirname, './views'));
+
 app.set('view engine', 'ejs');
 
 app.use(express.static(publicPath));
