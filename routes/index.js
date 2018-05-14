@@ -13,7 +13,7 @@ const API_LIST = `${API_URL}episodes/detras-del-pixel/`;
 const DEFAULT_META = {
   title: 'Detrás del Pixel',
   description: 'Sitio web para detrás del pixel',
-  preview_url: 'https://detrasdelpixel.com/preview.png',
+  preview_url: 'https://detrasdelpixel.com/preview.jpg',
 };
 
 function formatBytes(bytes, decimals) {

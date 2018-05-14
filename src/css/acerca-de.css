@@ -1,6 +1,5 @@
 .acerca-de {
-  margin: calc(var(--double-margin) + var(--margin)) 0
-    calc(var(--double-margin) + var(--margin)) 0;
+  margin: calc(var(--double-margin) + var(--margin)) 0 var(--double-margin) 0;
 }
 
 .acerca-de > .wrapper {
