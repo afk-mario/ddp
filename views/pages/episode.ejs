@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body class="container">
+        <%- include('../partials/header', { podcast: podcast }); %>
+        <main class='episode-main'>
+            <div class="wrapper">
+                <%- include('../partials/episode-single', {
+                    episode: single,
+                    className: 'active',
+                    podcast: podcast
+                }); %>
+            </div>
+        </main>
+
+        <%- include('../partials/footer', { podcast: podcast }); %>
+    </body>
+</html>

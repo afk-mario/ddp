@@ -1,0 +1,123 @@
+.acerca-de {
+  margin: calc(var(--double-margin) + var(--margin)) 0
+    calc(var(--double-margin) + var(--margin)) 0;
+}
+
+.acerca-de > .wrapper {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.acerca-de .logo {
+  width: 35%;
+  min-height: 200px;
+  max-width: 800px;
+  background: var(--light-gray);
+  max-width: var(--max-width);
+  border: var(--half-margin) solid var(--super-light-gray);
+  margin-bottom: var(--double-margin);
+}
+
+.acerca-de .rich-text {
+  max-width: 800px;
+  max-width: var(--max-width);
+  font-size: 1em;
+  margin: auto;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: var(--double-margin);
+  background: var(--super-light-gray);
+}
+
+.acerca-de .rich-text p:first-child {
+  margin-top: 0;
+}
+
+.acerca-de .rich-text p:last-child {
+  margin-bottom: 0;
+}
+
+.acerca-de .rich-text a {
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 4px solid var(--light-gray);
+  color: var(--black);
+  transition: all 0.2s ease;
+}
+
+.acerca-de .rich-text a:hover {
+  border-color: black;
+}
+
+.podcast-links {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: var(--margin);
+}
+
+.podcast-links li {
+  flex: 1 0 auto;
+}
+
+.podcast-links li:not(:last-child) {
+  margin-right: var(--half-margin);
+}
+
+.podcast-links a {
+  width: 100%;
+  text-decoration: none;
+  color: var(--gray);
+  transition: all 0.2s ease;
+  font-size: 1em;
+  display: inline-block;
+  text-align: center;
+  padding: var(--half-margin);
+  border: 2px solid var(--super-light-gray);
+  border-radius: 100px;
+}
+
+.podcast-links a:not(:last-child) {
+  margin-right: var(--half-margin);
+}
+
+.podcast-links a:hover {
+  color: var(--dark-gray);
+  transform: translateY(-2px);
+  text-shadow: none;
+}
+
+@media screen and (max-width: 40em) {
+  .acerca-de .logo {
+    width: 100%;
+    margin-bottom: var(--margin);
+    border: none;
+  }
+
+  .podcast-links li {
+    width: 100%;
+  }
+
+  .podcast-links li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: var(--half-margin);
+  }
+
+  .podcast-links a {
+    padding: 5px;
+  }
+
+  .acerca-de .rich-text {
+    font-size: 1em;
+    padding: var(--margin) var(--half-margin) var(--margin) var(--half-margin);
+  }
+
+  .acerca-de .rich-text a {
+    border-bottom: 2px solid var(--light-gray);
+  }
+}

@@ -1,0 +1,11 @@
+.episode-main {
+  margin: calc(var(--double-margin) + var(--margin)) 0 var(--double-margin) 0;
+}
+
+.episode-main > .wrapper {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}

@@ -179,56 +179,34 @@
   padding-right: var(--half-margin);
 }
 
-.episode-date {
-}
-
 @media screen and (max-width: 40em) {
-  .episode-cover {
-    width: 30%;
-    margin-right: var(--half-margin);
+  .episode-cover,
+  .episode-single.active .episode-cover {
+    width: 100%;
+    margin-right: 0;
   }
 
   .episode-cover img {
     min-height: 0;
   }
 
-  .episode-single h2 {
-    font-size: 1em;
-  }
-
   .episode-info,
   .active .episode-info {
-    width: calc(70% - var(--half-margin));
+    /* width: calc(70% - var(--half-margin)); */
+    width: calc(100% - var(--margin));
+    margin: auto;
+  }
+
+  .episode-info .episode-title,
+  .episode-info .episode-data {
+    margin-bottom: var(--margin);
   }
 
   .episode-info .episode-links a {
-    text-align: left;
-    padding: 0;
-    border: none;
-    border-radius: 0px;
-    font-size: 0.8em;
-  }
-
-  .episode-info .episode-links a:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .active .episode-info .episode-links {
-    padding-bottom: var(--half-margin);
+    padding: 5px;
   }
 
   .episode-single a.episode-title h2 {
-    border-bottom: 3px solid var(--light-gray);
-  }
-
-  .episode-data {
-    font-size: 0.7em;
-  }
-
-  .episode-data span:not(:first-child) {
-    padding-left: 4px;
-  }
-  .episode-data span:not(:last-child) {
-    padding-right: 4px;
+    margin-top: var(--margin);
   }
 }

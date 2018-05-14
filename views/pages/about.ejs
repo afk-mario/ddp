@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body class="container">
+        <%- include('../partials/header', { podcast: podcast }); %>
+        <main class='acerca-de'>
+            <div class="wrapper">
+                <div class="podcast-info">
+                    <img class="logo" src="<%= podcast.image %>" alt="<%= podcast.title %>">
+                    <ul class="podcast-links">
+                        <li>
+                            <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/afk_mcz" class="tw">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/detras-del-pixel" class="fb">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/detras-del-pixel" class="ig">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li class="rss">
+                            <a
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href="<%= podcast.feedBurner %>">
+                                <i class="fas fa-rss"></i>rss
+                            </a>
+                        </li>
+                        <li class="itunes">
+                            <a 
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href="<%= podcast.iTunesURL %>">
+                                <i class="fas fa-podcast"></i>iTunes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rich-text">
+                  <%- podcast.md %>
+                </div>
+            </div>
+        </main>
+
+        <%- include('../partials/footer', { podcast: podcast }); %>
+    </body>
+</html>

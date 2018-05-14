@@ -1,5 +1,4 @@
 #header {
-  /* margin: 0 0 var(--margin); */
   background: rgba(255, 255, 255, var(--header-background-opacity));
   position: fixed;
   width: 100%;
@@ -27,6 +26,12 @@
 
 #header nav {
   opacity: var(--nav-opacity);
+  position: fixed;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, 0);
 }
 
 #header nav ul {
@@ -78,5 +83,9 @@
 
   #header .mini-logo {
     width: 25px;
+  }
+
+  #header nav {
+    /* margin-left: 25px; */
   }
 }

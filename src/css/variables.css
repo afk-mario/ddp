@@ -20,10 +20,10 @@
   --highlight: var(--highlight-yellow);
   --highlight-soft: rgba(245, 255, 0, 0.5);
 
-  --header-background-opacity: 0;
+  --header-background-opacity: 1;
   --footer-background-opacity: 1;
-  --footer-position: 100%;
-  --nav-opacity: 0;
+  --footer-position: 0%;
+  --nav-opacity: 1;
 
   --gradient-pink-blue: linear-gradient(
     54deg,

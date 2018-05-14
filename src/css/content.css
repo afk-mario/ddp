@@ -27,10 +27,6 @@ img {
   justify-content: center;
 }
 
-main {
-  margin: 40px 0 40px 0;
-}
-
 .wrapper {
   width: var(--wrapper-width);
   max-width: var(--max-width);

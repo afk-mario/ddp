@@ -1,0 +1,16 @@
+.e404 {
+  margin: 0;
+}
+
+.e404 .wrapper {
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.e404 .rich-text {
+  margin: 0;
+}

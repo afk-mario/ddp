@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body class="container">
+        <%- include('../partials/header', { podcast: podcast }); %>
+        <main class='e404'>
+            <div class="wrapper">
+                <h1>Error 404</h1>
+                <div class="rich-text">
+                    <p>No se dónde está la página:</p>
+                    <pre><%= url %></pre>
+                    <p>Pero mándame un tweet <a href="https://twitter.com/afk_mcz/">@afk_mcz</a> e intentaré arreglarlo</p>
+                </div>
+            </div>
+        </main>
+
+        <%- include('../partials/footer', { podcast: podcast }); %>
+    </body>
+</html>
