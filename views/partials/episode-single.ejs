@@ -1,10 +1,26 @@
 <div class="episode-single <%= className %>">
     <div class="wrapper">
-        <div class="episode-cover">
+        <a href="/episode/<%= episode.slug %>" class="episode-cover">
             <img src="<%= episode.image %>" alt="<%= episode.slug %>">
-        </div>
+        </a>
         <div class="episode-info">
-            <h2><%= episode.title %></h2>
+            <a href="/episode/<%= episode.slug %>" class="episode-title">
+                <h2><%= episode.title %></h2>
+            </a>
+            <div class="episode-data">
+            <span class="episode-date hide-desktop">
+            <%= episode.frmtDateMobile %>
+            </span>
+            <span class="episode-date hide-mobile">
+            <%= episode.frmtDateDesktop %>
+            </span>
+            <span class="episode-duration">
+                <%= episode.duration %>
+            </span>
+            <span class="episode-size">
+                <%= episode.frmtSize %>
+            </span>
+            </div>
             <div class="episode-links">
                 <a 
                     href="https://ellugar.co/podcasts/detras-del-pixel/<%= episode.slug %>"

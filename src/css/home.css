@@ -1,12 +1,9 @@
-@import './variables.css';
-
 .main-about .wrapper {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--double-margin) auto;
-  background: white;
 }
 
 .main-about img {

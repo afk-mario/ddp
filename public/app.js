@@ -74,9 +74,7 @@
   /******/ /******/ __webpack_require__.p = ''; // Load entry module and return exports
   /******/
   /******/
-  /******/ /******/ return __webpack_require__(
-    (__webpack_require__.s = './src/js/app.js'),
-  );
+  /******/ /******/ return __webpack_require__((__webpack_require__.s = 0));
   /******/
 })(
   /************************************************************************/
@@ -2054,6 +2052,157 @@
         /***/
       },
 
+    /***/ './node_modules/css-loader/index.js??ref--5-1!./node_modules/postcss-loader/lib/index.js??ref--5-2!./src/css/style.css':
+      /*!***********************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/postcss-loader/lib??ref--5-2!./src/css/style.css ***!
+  \***********************************************************************************************************/
+      /*! no static exports found */
+      /***/ function(module, exports, __webpack_require__) {
+        exports = module.exports = __webpack_require__(
+          /*! ../../node_modules/css-loader/lib/css-base.js */ './node_modules/css-loader/lib/css-base.js',
+        )(true);
+        // imports
+
+        // module
+        exports.push([
+          module.i,
+          ":root {\n  --wrapper-width: 85%;\n  --margin: 20px;\n  --half-margin: 10px;\n  --double-margin: 40px;\n\n  --max-width: 800px;\n\n  --black: #000000;\n  --white: #ffffff;\n  --super-light-gray: whitesmoke;\n  --light-gray: #e8e8e8;\n  --dark-gray: #1d1d1d;\n  --gray: #a8a8a8;\n\n  --highlight-yellow: #fff200;\n  --highlight-pink: #ff3168;\n  --highlight-blue: #00a5ff;\n\n  --highlight: #fff200;\n\n  --highlight: var(--highlight-yellow);\n  --highlight-soft: rgba(245, 255, 0, .5);\n\n  --header-background-opacity: 0;\n  --footer-background-opacity: 1;\n  --footer-position: 100%;\n  --nav-opacity: 0;\n\n  --gradient-pink-blue: linear-gradient(\n    54deg,\n    rgba(255, 49, 104, 1) 0%,\n    rgba(0, 165, 255, 1) 100%\n  );\n\n  --gradient-blue-pink: linear-gradient(\n    30deg,\n    rgba(0, 165, 255, 1) 0%,\n    rgba(255, 49, 104, 1) 100%\n  );\n\n  --gradient-ddp: linear-gradient(\n    90deg,\n    rgba(255, 54, 106, 1) 0%,\n    rgba(255, 54, 106, 1) 10%,\n    rgba(251, 255, 0, 1) 10%,\n    rgba(251, 255, 0, 1) 20%,\n    rgba(0, 174, 255, 1) 20%,\n    rgba(0, 174, 255, 1) 30%,\n    rgba(29, 29, 29, 1) 30%\n  );\n\n  --gradient-ddp-small: linear-gradient(\n    90deg,\n    rgba(255, 54, 106, 1) 0%,\n    rgba(255, 54, 106, 1) 7%,\n    rgba(251, 255, 0, 1) 7%,\n    rgba(251, 255, 0, 1) 13%,\n    rgba(0, 174, 255, 1) 13%,\n    rgba(0, 174, 255, 1) 20%,\n    rgba(29, 29, 29, 1) 20%\n  );\n}\nbody,\nhtml {\n  padding: 0;\n  margin: 0;\n  font-family: 'Montserrat', sans-serif;\n  background: #ffffff;\n  background: var(--white);\n}\n* {\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\nimg {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  height: auto;\n  margin: auto;\n  color: black;\n  font-size: 0.8em;\n  text-transform: uppercase;\n  color: black;\n  font-weight: 600;\n  text-align: center;\n  overflow: hidden;\n\n  -webkit-box-align: center;\n\n      -ms-flex-align: center;\n\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\nmain {\n  margin: 40px 0 40px 0;\n}\n.wrapper {\n  width: 85%;\n  width: var(--wrapper-width);\n  max-width: 800px;\n  max-width: var(--max-width);\n}\nul {\n  padding: 0;\n  margin: 0;\n}\na {\n  text-decoration: none;\n}\n@media screen and (max-width: 40em) {\n  .hide-mobile {\n    display: none !important;\n  }\n}\n@media screen and (min-width: 40em) {\n  .hide-desktop {\n    display: none !important;\n  }\n}\na i {\n  color: #e8e8e8;\n  color: var(--light-gray);\n  margin-right: 10px;\n  margin-right: var(--half-margin);\n  -webkit-transition: color 0.2s ease, -webkit-transform 0.2s ease;\n  transition: color 0.2s ease, -webkit-transform 0.2s ease;\n  transition: color 0.2s ease, transform 0.2s ease;\n  transition: color 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;\n  text-shadow: none;\n  /* font-size: 0.9em; */\n}\na:hover i {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n}\n.download:hover i {\n  /* color: var(--highlight-yellow); */\n}\n.listen:hover i {\n  /* color: var(--highlight-pink); */\n}\n.rss:hover i {\n  color: #ff3168;\n  color: var(--highlight-pink);\n}\n.itunes:hover i {\n  color: #00a5ff;\n  color: var(--highlight-blue);\n}\n.rich-text {\n  max-width: 800px;\n  max-width: var(--max-width);\n  font-size: 1em;\n  margin: auto;\n}\n.rich-text > :first-child {\n  margin-top: 20px;\n  margin-top: var(--margin);\n}\n.rich-text > :last-child {\n  margin-bottom: 0px;\n}\n.rich-text.no-margin > :first-child {\n  margin-top: 0px;\n}\n.rich-text *::-moz-selection {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  background: rgba(245, 255, 0, .5);\n  background: var(--highlight-soft);\n}\n.rich-text *::selection {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  background: rgba(245, 255, 0, .5);\n  background: var(--highlight-soft);\n}\n.rich-text *::-moz-selection {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  background: rgba(245, 255, 0, .5);\n  background: var(--highlight-soft);\n}\n.rich-text ul {\n  margin: 20px 0 20px 0;\n  margin: var(--margin) 0 var(--margin) 0;\n  list-style: none;\n  padding: 0;\n}\n.rich-text ul li {\n  font-size: 1em;\n  max-width: 800px;\n  max-width: var(--max-width);\n  line-height: 1.8em;\n  margin: 0 0 10px 0;\n  margin: 0 0 var(--half-margin) 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  width: 100%;\n}\n.rich-text ul li:before {\n  content: '- ';\n}\n.rich-text ul li a {\n  font-size: 1em;\n}\n.rich-text ul li p {\n  display: inline;\n  font-size: 1em;\n}\n.rich-text h1 {\n  width: 100%;\n  text-align: left;\n}\n.rich-text h2 {\n  margin: 10px 0 10px 0;\n}\n.rich-text h3 {\n  width: 100%;\n}\n.rich-text p a {\n  font-size: 1em;\n}\n.rich-text p:first-child img {\n  display: none;\n}\n.rich-text blockquote {\n  font-style: italic;\n  margin-left: 1.5em;\n  padding-left: 1em;\n  margin-bottom: 20px;\n  margin-bottom: var(--margin);\n  border-left: 2px solid #00a5ff;\n  border-left: 2px solid var(--highlight-blue);\n}\n.rich-text blockquote p {\n  color: $gray3;\n  margin: 0;\n}\n.rich-text pre {\n  background-color: #e8e8e8;\n  background-color: var(--light-gray);\n  display: block;\n  padding: 1em;\n  overflow-x: auto;\n  margin: 20px auto 20px auto;\n  margin: var(--margin) auto var(--margin) auto;\n  border-left: 2px solid #00a5ff;\n  border-left: 2px solid var(--highlight-blue);\n}\n.rich-text pre > code {\n  padding: 0;\n  background-color: transparent;\n  white-space: pre;\n}\n.rich-text hr {\n  -webkit-box-sizing: content-box;\n          box-sizing: content-box;\n  height: 0;\n  overflow: visible;\n  border-color: #00a5ff;\n  border-color: var(--highlight-blue);\n}\n.rich-text code {\n  font-size: 0.9em;\n  padding: 0 0.5em;\n  background-color: #f1f1f1;\n  white-space: pre-wrap;\n}\n.rich-text img {\n  max-width: 100%;\n  height: auto;\n  display: block;\n  margin: auto;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.rich-text a {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  position: relative;\n  background: $light-gray;\n  z-index: 2;\n}\n.rich-text a::before {\n  width: 0%;\n  height: 100%;\n  z-index: -1;\n  background: #e8e8e8;\n  background: var(--light-gray);\n  content: '';\n  position: absolute;\n  bottom: 0;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n}\n.rich-text a:hover,\n.rich-text a.active {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n}\n.rich-text a:hover::before,\n.rich-text a.active::before {\n  width: 100%;\n  background: rgba(245, 255, 0, .5);\n  background: var(--highlight-soft);\n}\n@media screen and (max-width: 40em) {\n  .rich-text ul li {\n    width: 100%;\n  }\n  .rich-text h1 {\n    font-size: 1.4em;\n  }\n  .rich-text h2 {\n    font-size: 1.2em;\n  }\n  .rich-text h3 {\n    font-size: 1.1em;\n  }\n}\n#header {\n  /* margin: 0 0 var(--margin); */\n  background: rgba(255, 255, 255, 0);\n  background: rgba(255, 255, 255, var(--header-background-opacity));\n  position: fixed;\n  width: 100%;\n  top: 0;\n  z-index: 100;\n  padding: 10px;\n  padding: var(--half-margin);\n}\n#header .wrapper {\n  width: 95%;\n  max-width: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: auto;\n}\n#header .mini-logo {\n  width: 35px;\n  height: auto;\n  display: block;\n  margin: 0;\n}\n#header nav {\n  opacity: 0;\n  opacity: var(--nav-opacity);\n}\n#header nav ul {\n  list-style: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n}\n#header nav li:not(:last-child) {\n  margin-right: 20px;\n  margin-right: var(--margin);\n}\n#header nav a {\n  text-decoration: none;\n  color: #a8a8a8;\n  color: var(--gray);\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  font-size: 1.2em;\n  display: inline-block;\n}\n#header a:hover {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  -webkit-transform: translateY(-2px);\n          transform: translateY(-2px);\n  text-shadow: none;\n}\n@media screen and (max-width: 30em) {\n  #header {\n    font-size: 0.85em;\n  }\n\n  #header .wrapper {\n    width: 100%;\n  }\n\n  #header .mini-logo {\n    width: 30px;\n  }\n\n  #header nav li:not(:last-child) {\n    margin-right: 10px;\n    margin-right: var(--half-margin);\n  }\n}\n@media screen and (max-width: 25em) {\n  #header {\n    font-size: 0.7em;\n  }\n\n  #header .mini-logo {\n    width: 25px;\n  }\n}\n#footer {\n  background: rgba(255, 255, 255, 1);\n  background: rgba(255, 255, 255, var(--footer-background-opacity));\n  position: fixed;\n  width: 100%;\n  bottom: 0;\n  z-index: 100;\n  padding: 10px;\n  padding: var(--half-margin);\n}\n#footer .wrapper {\n  width: 95%;\n  max-width: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: auto;\n}\n@media screen and (max-width: 30em) {\n  #footer {\n    font-size: 0.85em;\n  }\n\n  #footer .wrapper {\n    width: 100%;\n  }\n}\n@media screen and (max-width: 25em) {\n  #footer {\n    font-size: 0.7em;\n  }\n}\n.social {\n  list-style: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n}\n.social a {\n  text-decoration: none;\n  color: #e8e8e8;\n  color: var(--light-gray);\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  font-size: 1.2em;\n  display: inline-block;\n}\n.social a i {\n  /* margin: 0; */\n}\n.social li:not(:last-child) {\n  margin-right: 20px;\n  margin-right: var(--margin);\n}\n.social a:hover {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  -webkit-transform: translateY(-1px);\n          transform: translateY(-1px);\n}\n@media screen and (max-width: 30em) {\n  .social li:not(:last-child) {\n    margin-right: 10px;\n    margin-right: var(--half-margin);\n  }\n}\n.listen-on {\n  list-style: none;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%;\n}\n.listen-on a {\n  text-decoration: none;\n  color: #a8a8a8;\n  color: var(--gray);\n  -webkit-transition: color 0.2s ease, -webkit-transform 0.2s ease;\n  transition: color 0.2s ease, -webkit-transform 0.2s ease;\n  transition: color 0.2s ease, transform 0.2s ease;\n  transition: color 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;\n  font-size: 1.2em;\n  display: inline-block;\n}\n.listen-on li:not(:last-child) {\n  margin-right: 20px;\n  margin-right: var(--margin);\n}\n.listen-on a:hover {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  -webkit-transform: translateY(-1px);\n          transform: translateY(-1px);\n  text-shadow: none;\n}\n.main-about .wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row wrap;\n          flex-flow: row wrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin: 0 auto 40px auto;\n  margin: 0 auto var(--double-margin) auto;\n}\n.main-about img {\n  width: 50%;\n  /* opacity: 0; */\n  /* background: var(--dark-gray); */\n}\n.main-about .description {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  display: block;\n  -webkit-box-flex: 1;\n      -ms-flex: 1 0 auto;\n          flex: 1 0 auto;\n  font-size: 2em;\n  padding: 20px;\n  padding: var(--margin);\n  width: calc(50% - 20px);\n  width: calc(50% - var(--margin));\n}\n.main-about .description h1 {\n  margin: 0;\n  display: inline;\n  font-size: 1.2em;\n}\n.main-about .description a {\n  font-weight: 600;\n  text-decoration: none;\n  border-bottom: 4px solid #e8e8e8;\n  border-bottom: 4px solid var(--light-gray);\n  color: #000000;\n  color: var(--black);\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n}\n.main-about .description a:hover {\n  border-color: black;\n}\n@media screen and (max-width: 40em) {\n  .main-about .wrapper {\n    margin: 0 auto 20px auto;\n    margin: 0 auto var(--margin) auto;\n  }\n\n  .main-about img {\n    width: 100%;\n  }\n\n  .main-about .description {\n    width: 100%;\n    padding: 0;\n    font-size: 1.3em;\n  }\n}\n.episode-single {\n  width: 100%;\n  /* background: black; */\n  /* margin: 0 0 var(--double-margin) 0; */\n  padding-bottom: 40px;\n  padding-bottom: var(--double-margin);\n  -webkit-transition: color 0.2s ease, -webkit-box-shadow 0.2s ease;\n  transition: color 0.2s ease, -webkit-box-shadow 0.2s ease;\n  transition: box-shadow 0.2s ease, color 0.2s ease;\n  transition: box-shadow 0.2s ease, color 0.2s ease, -webkit-box-shadow 0.2s ease;\n  position: relative;\n}\n.episode-single:not(.active) h2 {\n  margin: 0;\n}\n.episode-single a.episode-title h2 {\n  margin-bottom: 0;\n  text-decoration: none;\n  border-bottom: 4px solid #e8e8e8;\n  border-bottom: 4px solid var(--light-gray);\n  color: #000000;\n  color: var(--black);\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n}\n.episode-single a.episode-title:hover h2 {\n  border-color: black;\n}\n.episode-single:not(:first-child):not(.active):before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  background: whitesmoke;\n  background: var(--super-light-gray);\n  /* background-image: var(--gradient-ddp-small); */\n  height: 2px;\n}\n/* .episode-single:not(:first-child):not(.active):before { */\n.episode-single:not(:first-child) {\n  padding-top: 40px;\n  padding-top: var(--double-margin);\n}\n.episode-single .wrapper {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row wrap;\n          flex-flow: row wrap;\n  width: 100%;\n  max-width: none;\n}\n.episode-single.active {\n  width: calc(100% + 20px);\n  width: calc(100% + var(--margin));\n  background: #ffffff;\n  background: var(--white);\n  -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .25);\n          box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, .25);\n  margin: 0 0 20px -10px;\n  margin: 0 0 var(--margin) calc(-1 * var(--half-margin));\n  padding: 0;\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  cursor: default;\n}\n.episode-single.active:hover {\n  -webkit-transform: translateY(0);\n          transform: translateY(0);\n}\n.episode-single.active + .episode-single {\n  padding-top: 20px;\n  padding-top: var(--margin);\n}\n.episode-single.active + .episode-single:before {\n  background: transparent;\n}\n.episode-cover {\n  width: 20%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-right: 20px;\n  margin-right: var(--margin);\n  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);\n  transition: -webkit-transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);\n  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);\n  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);\n}\n.episode-cover img {\n  min-height: 125px;\n  background: #e8e8e8;\n  background: var(--light-gray);\n}\n.episode-single.active .episode-cover {\n  width: 30%;\n}\n.episode-info {\n  width: calc(80% - 20px);\n  width: calc(80% - var(--margin));\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: column;\n          flex-flow: column;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.active .episode-info {\n  width: calc(70% - 40px);\n  width: calc(70% - var(--double-margin));\n}\n.episode-info .episode-links {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row wrap;\n          flex-flow: row wrap;\n  width: 100%;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.episode-info .episode-links a {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 0 auto;\n          flex: 1 0 auto;\n  text-decoration: none;\n  color: #a8a8a8;\n  color: var(--gray);\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  font-size: 1em;\n  display: inline-block;\n  text-align: center;\n  padding: 10px;\n  padding: var(--half-margin);\n  border: 2px solid whitesmoke;\n  border: 2px solid var(--super-light-gray);\n  border-radius: 100px;\n}\n.episode-info .episode-links a:not(:last-child) {\n  margin-right: 10px;\n  margin-right: var(--half-margin);\n}\n.episode-info .episode-links a:hover {\n  color: #1d1d1d;\n  color: var(--dark-gray);\n  -webkit-transform: translateY(-2px);\n          transform: translateY(-2px);\n  text-shadow: none;\n}\n.active .episode-info .episode-links {\n  padding-bottom: 20px;\n  padding-bottom: var(--margin);\n}\n.episode-description {\n  width: 100%;\n  height: 0;\n  overflow: hidden;\n  -webkit-transition: height 0.4s ease;\n  transition: height 0.4s ease;\n}\n.active .episode-description {\n  height: auto;\n  position: relative;\n  padding: 10px;\n  padding: var(--half-margin);\n  background: whitesmoke;\n  background: var(--super-light-gray);\n  /* border-top: 4px solid var(--dark-gray); */\n}\n.active .episode-description:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  background-image: -webkit-gradient(\n    linear,\n    left top, right top,\n    from(rgba(255, 54, 106, 1)),\n    color-stop(10%, rgba(255, 54, 106, 1)),\n    color-stop(10%, rgba(251, 255, 0, 1)),\n    color-stop(20%, rgba(251, 255, 0, 1)),\n    color-stop(20%, rgba(0, 174, 255, 1)),\n    color-stop(30%, rgba(0, 174, 255, 1)),\n    color-stop(30%, rgba(29, 29, 29, 1))\n  );\n  background-image: linear-gradient(\n    90deg,\n    rgba(255, 54, 106, 1) 0%,\n    rgba(255, 54, 106, 1) 10%,\n    rgba(251, 255, 0, 1) 10%,\n    rgba(251, 255, 0, 1) 20%,\n    rgba(0, 174, 255, 1) 20%,\n    rgba(0, 174, 255, 1) 30%,\n    rgba(29, 29, 29, 1) 30%\n  );\n  background-image: var(--gradient-ddp);\n  height: 3px;\n}\n.episode-data {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: row wrap;\n          flex-flow: row wrap;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  color: #a8a8a8;\n  color: var(--gray);\n  font-size: 0.9em;\n}\n.episode-data span {\n  padding-top: 2px;\n  padding-bottom: 2px;\n}\n.episode-data span:not(:first-child) {\n  padding-left: 10px;\n  padding-left: var(--half-margin);\n}\n.episode-data span:not(:last-child) {\n  /* margin-right: var(--half-margin); */\n  border-right: 2px solid #e8e8e8;\n  border-right: 2px solid var(--light-gray);\n  padding-right: 10px;\n  padding-right: var(--half-margin);\n}\n.episode-date {\n}\n@media screen and (max-width: 40em) {\n  .episode-cover {\n    width: 30%;\n    margin-right: 10px;\n    margin-right: var(--half-margin);\n  }\n\n  .episode-cover img {\n    min-height: 0;\n  }\n\n  .episode-single h2 {\n    font-size: 1em;\n  }\n\n  .episode-info,\n  .active .episode-info {\n    width: calc(70% - 10px);\n    width: calc(70% - var(--half-margin));\n  }\n\n  .episode-info .episode-links a {\n    text-align: left;\n    padding: 0;\n    border: none;\n    border-radius: 0px;\n    font-size: 0.8em;\n  }\n\n  .episode-info .episode-links a:not(:last-child) {\n    margin-right: 0;\n  }\n\n  .active .episode-info .episode-links {\n    padding-bottom: 10px;\n    padding-bottom: var(--half-margin);\n  }\n\n  .episode-single a.episode-title h2 {\n    border-bottom: 3px solid #e8e8e8;\n    border-bottom: 3px solid var(--light-gray);\n  }\n\n  .episode-data {\n    font-size: 0.7em;\n  }\n\n  .episode-data span:not(:first-child) {\n    padding-left: 4px;\n  }\n  .episode-data span:not(:last-child) {\n    padding-right: 4px;\n  }\n}\n.episode-list {\n  width: 85%;\n  width: var(--wrapper-width);\n  max-width: 800px;\n  max-width: var(--max-width);\n  margin: auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-flow: column nowrap;\n          flex-flow: column nowrap;\n}\n",
+          '',
+          {
+            version: 3,
+            sources: [
+              '/Users/afk/Projects/Web/Node/ddp/src/css/variables.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/content.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/icons.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/rich-text.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/header.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/footer.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/social.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/listen-on.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/home.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/episode-single.css',
+              '/Users/afk/Projects/Web/Node/ddp/src/css/episode-list.css',
+            ],
+            names: [],
+            mappings:
+              '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',
+            file: 'style.css',
+            sourcesContent: [
+              ':root {\n  --wrapper-width: 85%;\n  --margin: 20px;\n  --half-margin: calc(20px / 2);\n  --double-margin: calc(20px * 2);\n\n  --max-width: 800px;\n\n  --black: #000000;\n  --white: #ffffff;\n  --super-light-gray: whitesmoke;\n  --light-gray: #e8e8e8;\n  --dark-gray: #1d1d1d;\n  --gray: #a8a8a8;\n\n  --highlight-yellow: #fff200;\n  --highlight-pink: #ff3168;\n  --highlight-blue: #00a5ff;\n\n  --highlight: var(--highlight-yellow);\n  --highlight-soft: rgba(245, 255, 0, 0.5);\n\n  --header-background-opacity: 0;\n  --footer-background-opacity: 1;\n  --footer-position: 100%;\n  --nav-opacity: 0;\n\n  --gradient-pink-blue: linear-gradient(\n    54deg,\n    rgba(255, 49, 104, 1) 0%,\n    rgba(0, 165, 255, 1) 100%\n  );\n\n  --gradient-blue-pink: linear-gradient(\n    30deg,\n    rgba(0, 165, 255, 1) 0%,\n    rgba(255, 49, 104, 1) 100%\n  );\n\n  --gradient-ddp: linear-gradient(\n    90deg,\n    rgba(255, 54, 106, 1) 0%,\n    rgba(255, 54, 106, 1) 10%,\n    rgba(251, 255, 0, 1) 10%,\n    rgba(251, 255, 0, 1) 20%,\n    rgba(0, 174, 255, 1) 20%,\n    rgba(0, 174, 255, 1) 30%,\n    rgba(29, 29, 29, 1) 30%\n  );\n\n  --gradient-ddp-small: linear-gradient(\n    90deg,\n    rgba(255, 54, 106, 1) 0%,\n    rgba(255, 54, 106, 1) 7%,\n    rgba(251, 255, 0, 1) 7%,\n    rgba(251, 255, 0, 1) 13%,\n    rgba(0, 174, 255, 1) 13%,\n    rgba(0, 174, 255, 1) 20%,\n    rgba(29, 29, 29, 1) 20%\n  );\n}\n',
+              "body,\nhtml {\n  padding: 0;\n  margin: 0;\n  font-family: 'Montserrat', sans-serif;\n  background: var(--white);\n}\n\n* {\n  box-sizing: border-box;\n}\n\nimg {\n  display: flex;\n  width: 100%;\n  height: auto;\n  margin: auto;\n  color: black;\n  font-size: 0.8em;\n  text-transform: uppercase;\n  color: black;\n  font-weight: 600;\n  text-align: center;\n  overflow: hidden;\n\n  align-items: center;\n  justify-content: center;\n}\n\nmain {\n  margin: 40px 0 40px 0;\n}\n\n.wrapper {\n  width: var(--wrapper-width);\n  max-width: var(--max-width);\n}\n\nul {\n  padding: 0;\n  margin: 0;\n}\n\na {\n  text-decoration: none;\n}\n\n@media screen and (max-width: 40em) {\n  .hide-mobile {\n    display: none !important;\n  }\n}\n\n@media screen and (min-width: 40em) {\n  .hide-desktop {\n    display: none !important;\n  }\n}\n",
+              'a i {\n  color: var(--light-gray);\n  margin-right: var(--half-margin);\n  transition: color 0.2s ease, transform 0.2s ease;\n  text-shadow: none;\n  /* font-size: 0.9em; */\n}\n\na:hover i {\n  color: var(--dark-gray);\n}\n\n.download:hover i {\n  /* color: var(--highlight-yellow); */\n}\n\n.listen:hover i {\n  /* color: var(--highlight-pink); */\n}\n\n.rss:hover i {\n  color: var(--highlight-pink);\n}\n\n.itunes:hover i {\n  color: var(--highlight-blue);\n}\n',
+              ".rich-text {\n  max-width: var(--max-width);\n  font-size: 1em;\n  margin: auto;\n}\n\n.rich-text > :first-child {\n  margin-top: var(--margin);\n}\n\n.rich-text > :last-child {\n  margin-bottom: 0px;\n}\n\n.rich-text.no-margin > :first-child {\n  margin-top: 0px;\n}\n\n.rich-text *::selection {\n  color: var(--dark-gray);\n  background: var(--highlight-soft);\n}\n\n.rich-text *::-moz-selection {\n  color: var(--dark-gray);\n  background: var(--highlight-soft);\n}\n\n.rich-text ul {\n  margin: var(--margin) 0 var(--margin) 0;\n  list-style: none;\n  padding: 0;\n}\n\n.rich-text ul li {\n  font-size: 1em;\n  max-width: var(--max-width);\n  line-height: 1.8em;\n  margin: 0 0 var(--half-margin) 0;\n  box-sizing: border-box;\n  width: 100%;\n}\n\n.rich-text ul li:before {\n  content: '- ';\n}\n\n.rich-text ul li a {\n  font-size: 1em;\n}\n\n.rich-text ul li p {\n  display: inline;\n  font-size: 1em;\n}\n\n.rich-text h1 {\n  width: 100%;\n  text-align: left;\n}\n\n.rich-text h2 {\n  margin: 10px 0 10px 0;\n}\n\n.rich-text h3 {\n  width: 100%;\n}\n\n.rich-text p a {\n  font-size: 1em;\n}\n\n.rich-text p:first-child img {\n  display: none;\n}\n\n.rich-text blockquote {\n  font-style: italic;\n  margin-left: 1.5em;\n  padding-left: 1em;\n  margin-bottom: var(--margin);\n  border-left: 2px solid var(--highlight-blue);\n}\n\n.rich-text blockquote p {\n  color: $gray3;\n  margin: 0;\n}\n\n.rich-text pre {\n  background-color: var(--light-gray);\n  display: block;\n  padding: 1em;\n  overflow-x: auto;\n  margin: var(--margin) auto var(--margin) auto;\n  border-left: 2px solid var(--highlight-blue);\n}\n\n.rich-text pre > code {\n  padding: 0;\n  background-color: transparent;\n  white-space: pre;\n}\n\n.rich-text hr {\n  box-sizing: content-box;\n  height: 0;\n  overflow: visible;\n  border-color: var(--highlight-blue);\n}\n\n.rich-text code {\n  font-size: 0.9em;\n  padding: 0 0.5em;\n  background-color: #f1f1f1;\n  white-space: pre-wrap;\n}\n\n.rich-text img {\n  max-width: 100%;\n  height: auto;\n  display: block;\n  margin: auto;\n  box-sizing: border-box;\n}\n\n.rich-text a {\n  color: var(--dark-gray);\n  box-sizing: border-box;\n  position: relative;\n  background: $light-gray;\n  z-index: 2;\n}\n\n.rich-text a::before {\n  width: 0%;\n  height: 100%;\n  z-index: -1;\n  background: var(--light-gray);\n  content: '';\n  position: absolute;\n  bottom: 0;\n  transition: all 0.2s ease;\n}\n\n.rich-text a:hover,\n.rich-text a.active {\n  color: var(--dark-gray);\n}\n\n.rich-text a:hover::before,\n.rich-text a.active::before {\n  width: 100%;\n  background: var(--highlight-soft);\n}\n\n@media screen and (max-width: 40em) {\n  .rich-text ul li {\n    width: 100%;\n  }\n  .rich-text h1 {\n    font-size: 1.4em;\n  }\n  .rich-text h2 {\n    font-size: 1.2em;\n  }\n  .rich-text h3 {\n    font-size: 1.1em;\n  }\n}\n",
+              '#header {\n  /* margin: 0 0 var(--margin); */\n  background: rgba(255, 255, 255, var(--header-background-opacity));\n  position: fixed;\n  width: 100%;\n  top: 0;\n  z-index: 100;\n  padding: var(--half-margin);\n}\n\n#header .wrapper {\n  width: 95%;\n  max-width: none;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  margin: auto;\n}\n\n#header .mini-logo {\n  width: 35px;\n  height: auto;\n  display: block;\n  margin: 0;\n}\n\n#header nav {\n  opacity: var(--nav-opacity);\n}\n\n#header nav ul {\n  list-style: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n#header nav li:not(:last-child) {\n  margin-right: var(--margin);\n}\n\n#header nav a {\n  text-decoration: none;\n  color: var(--gray);\n  transition: all 0.2s ease;\n  font-size: 1.2em;\n  display: inline-block;\n}\n\n#header a:hover {\n  color: var(--dark-gray);\n  transform: translateY(-2px);\n  text-shadow: none;\n}\n\n@media screen and (max-width: 30em) {\n  #header {\n    font-size: 0.85em;\n  }\n\n  #header .wrapper {\n    width: 100%;\n  }\n\n  #header .mini-logo {\n    width: 30px;\n  }\n\n  #header nav li:not(:last-child) {\n    margin-right: var(--half-margin);\n  }\n}\n\n@media screen and (max-width: 25em) {\n  #header {\n    font-size: 0.7em;\n  }\n\n  #header .mini-logo {\n    width: 25px;\n  }\n}\n',
+              '#footer {\n  background: rgba(255, 255, 255, var(--footer-background-opacity));\n  position: fixed;\n  width: 100%;\n  bottom: 0;\n  z-index: 100;\n  padding: var(--half-margin);\n}\n\n#footer .wrapper {\n  width: 95%;\n  max-width: none;\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: space-between;\n  align-items: center;\n  margin: auto;\n}\n\n@media screen and (max-width: 30em) {\n  #footer {\n    font-size: 0.85em;\n  }\n\n  #footer .wrapper {\n    width: 100%;\n  }\n}\n\n@media screen and (max-width: 25em) {\n  #footer {\n    font-size: 0.7em;\n  }\n}\n',
+              '.social {\n  list-style: none;\n  display: flex;\n  flex-flow: row nowrap;\n}\n\n.social a {\n  text-decoration: none;\n  color: var(--light-gray);\n  transition: all 0.2s ease;\n  font-size: 1.2em;\n  display: inline-block;\n}\n\n.social a i {\n  /* margin: 0; */\n}\n\n.social li:not(:last-child) {\n  margin-right: var(--margin);\n}\n\n.social a:hover {\n  color: var(--dark-gray);\n  transform: translateY(-1px);\n}\n\n@media screen and (max-width: 30em) {\n  .social li:not(:last-child) {\n    margin-right: var(--half-margin);\n  }\n}\n',
+              '.listen-on {\n  list-style: none;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n}\n\n.listen-on a {\n  text-decoration: none;\n  color: var(--gray);\n  transition: color 0.2s ease, transform 0.2s ease;\n  font-size: 1.2em;\n  display: inline-block;\n}\n\n.listen-on li:not(:last-child) {\n  margin-right: var(--margin);\n}\n\n.listen-on a:hover {\n  color: var(--dark-gray);\n  transform: translateY(-1px);\n  text-shadow: none;\n}\n',
+              '.main-about .wrapper {\n  display: flex;\n  flex-flow: row wrap;\n  align-items: center;\n  justify-content: center;\n  margin: 0 auto var(--double-margin) auto;\n}\n\n.main-about img {\n  width: 50%;\n  /* opacity: 0; */\n  /* background: var(--dark-gray); */\n}\n\n.main-about .description {\n  color: var(--dark-gray);\n  display: block;\n  flex: 1 0 auto;\n  font-size: 2em;\n  padding: var(--margin);\n  width: calc(50% - var(--margin));\n}\n\n.main-about .description h1 {\n  margin: 0;\n  display: inline;\n  font-size: 1.2em;\n}\n\n.main-about .description a {\n  font-weight: 600;\n  text-decoration: none;\n  border-bottom: 4px solid var(--light-gray);\n  color: var(--black);\n  transition: all 0.2s ease;\n}\n\n.main-about .description a:hover {\n  border-color: black;\n}\n\n@media screen and (max-width: 40em) {\n  .main-about .wrapper {\n    margin: 0 auto var(--margin) auto;\n  }\n\n  .main-about img {\n    width: 100%;\n  }\n\n  .main-about .description {\n    width: 100%;\n    padding: 0;\n    font-size: 1.3em;\n  }\n}\n',
+              ".episode-single {\n  width: 100%;\n  /* background: black; */\n  /* margin: 0 0 var(--double-margin) 0; */\n  padding-bottom: var(--double-margin);\n  transition: box-shadow 0.2s ease, color 0.2s ease;\n  position: relative;\n}\n\n.episode-single:not(.active) h2 {\n  margin: 0;\n}\n\n.episode-single a.episode-title h2 {\n  margin-bottom: 0;\n  text-decoration: none;\n  border-bottom: 4px solid var(--light-gray);\n  color: var(--black);\n  transition: all 0.2s ease;\n}\n\n.episode-single a.episode-title:hover h2 {\n  border-color: black;\n}\n\n.episode-single:not(:first-child):not(.active):before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  background: var(--super-light-gray);\n  /* background-image: var(--gradient-ddp-small); */\n  height: 2px;\n}\n/* .episode-single:not(:first-child):not(.active):before { */\n\n.episode-single:not(:first-child) {\n  padding-top: var(--double-margin);\n}\n\n.episode-single .wrapper {\n  display: flex;\n  flex-flow: row wrap;\n  width: 100%;\n  max-width: none;\n}\n\n.episode-single.active {\n  width: calc(100% + var(--margin));\n  background: var(--white);\n  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);\n  margin: 0 0 var(--margin) calc(-1 * var(--half-margin));\n  padding: 0;\n  color: var(--dark-gray);\n  cursor: default;\n}\n\n.episode-single.active:hover {\n  transform: translateY(0);\n}\n\n.episode-single.active + .episode-single {\n  padding-top: var(--margin);\n}\n\n.episode-single.active + .episode-single:before {\n  background: transparent;\n}\n\n.episode-cover {\n  width: 20%;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center;\n  margin-right: var(--margin);\n  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1);\n}\n\n.episode-cover img {\n  min-height: 125px;\n  background: var(--light-gray);\n}\n\n.episode-single.active .episode-cover {\n  width: 30%;\n}\n\n.episode-info {\n  width: calc(80% - var(--margin));\n  display: flex;\n  flex-flow: column;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n\n.active .episode-info {\n  width: calc(70% - var(--double-margin));\n}\n\n.episode-info .episode-links {\n  display: flex;\n  flex-flow: row wrap;\n  width: 100%;\n  justify-content: space-between;\n}\n\n.episode-info .episode-links a {\n  flex: 1 0 auto;\n  text-decoration: none;\n  color: var(--gray);\n  transition: all 0.2s ease;\n  font-size: 1em;\n  display: inline-block;\n  text-align: center;\n  padding: var(--half-margin);\n  border: 2px solid var(--super-light-gray);\n  border-radius: 100px;\n}\n\n.episode-info .episode-links a:not(:last-child) {\n  margin-right: var(--half-margin);\n}\n\n.episode-info .episode-links a:hover {\n  color: var(--dark-gray);\n  transform: translateY(-2px);\n  text-shadow: none;\n}\n\n.active .episode-info .episode-links {\n  padding-bottom: var(--margin);\n}\n\n.episode-description {\n  width: 100%;\n  height: 0;\n  overflow: hidden;\n  transition: height 0.4s ease;\n}\n\n.active .episode-description {\n  height: auto;\n  position: relative;\n  padding: var(--half-margin);\n  background: var(--super-light-gray);\n  /* border-top: 4px solid var(--dark-gray); */\n}\n\n.active .episode-description:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  background-image: var(--gradient-ddp);\n  height: 3px;\n}\n\n.episode-data {\n  display: flex;\n  flex-flow: row wrap;\n  align-items: flex-start;\n  color: var(--gray);\n  font-size: 0.9em;\n}\n\n.episode-data span {\n  padding-top: 2px;\n  padding-bottom: 2px;\n}\n.episode-data span:not(:first-child) {\n  padding-left: var(--half-margin);\n}\n.episode-data span:not(:last-child) {\n  /* margin-right: var(--half-margin); */\n  border-right: 2px solid var(--light-gray);\n  padding-right: var(--half-margin);\n}\n\n.episode-date {\n}\n\n@media screen and (max-width: 40em) {\n  .episode-cover {\n    width: 30%;\n    margin-right: var(--half-margin);\n  }\n\n  .episode-cover img {\n    min-height: 0;\n  }\n\n  .episode-single h2 {\n    font-size: 1em;\n  }\n\n  .episode-info,\n  .active .episode-info {\n    width: calc(70% - var(--half-margin));\n  }\n\n  .episode-info .episode-links a {\n    text-align: left;\n    padding: 0;\n    border: none;\n    border-radius: 0px;\n    font-size: 0.8em;\n  }\n\n  .episode-info .episode-links a:not(:last-child) {\n    margin-right: 0;\n  }\n\n  .active .episode-info .episode-links {\n    padding-bottom: var(--half-margin);\n  }\n\n  .episode-single a.episode-title h2 {\n    border-bottom: 3px solid var(--light-gray);\n  }\n\n  .episode-data {\n    font-size: 0.7em;\n  }\n\n  .episode-data span:not(:first-child) {\n    padding-left: 4px;\n  }\n  .episode-data span:not(:last-child) {\n    padding-right: 4px;\n  }\n}\n",
+              '.episode-list {\n  width: var(--wrapper-width);\n  max-width: var(--max-width);\n  margin: auto;\n  display: flex;\n  flex-flow: column nowrap;\n}\n',
+            ],
+            sourceRoot: '',
+          },
+        ]);
+
+        // exports
+
+        /***/
+      },
+
+    /***/ './node_modules/css-loader/lib/css-base.js':
+      /*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+      /*! no static exports found */
+      /***/ function(module, exports) {
+        /*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+        // css base code, injected by the css-loader
+        module.exports = function(useSourceMap) {
+          var list = [];
+
+          // return the list of modules as css string
+          list.toString = function toString() {
+            return this.map(function(item) {
+              var content = cssWithMappingToString(item, useSourceMap);
+              if (item[2]) {
+                return '@media ' + item[2] + '{' + content + '}';
+              } else {
+                return content;
+              }
+            }).join('');
+          };
+
+          // import a list of modules into the list
+          list.i = function(modules, mediaQuery) {
+            if (typeof modules === 'string') modules = [[null, modules, '']];
+            var alreadyImportedModules = {};
+            for (var i = 0; i < this.length; i++) {
+              var id = this[i][0];
+              if (typeof id === 'number') alreadyImportedModules[id] = true;
+            }
+            for (i = 0; i < modules.length; i++) {
+              var item = modules[i];
+              // skip already imported module
+              // this implementation is not 100% perfect for weird media query combinations
+              //  when a module is imported multiple times with different media queries.
+              //  I hope this will never occur (Hey this way we have smaller bundles)
+              if (
+                typeof item[0] !== 'number' ||
+                !alreadyImportedModules[item[0]]
+              ) {
+                if (mediaQuery && !item[2]) {
+                  item[2] = mediaQuery;
+                } else if (mediaQuery) {
+                  item[2] = '(' + item[2] + ') and (' + mediaQuery + ')';
+                }
+                list.push(item);
+              }
+            }
+          };
+          return list;
+        };
+
+        function cssWithMappingToString(item, useSourceMap) {
+          var content = item[1] || '';
+          var cssMapping = item[3];
+          if (!cssMapping) {
+            return content;
+          }
+
+          if (useSourceMap && typeof btoa === 'function') {
+            var sourceMapping = toComment(cssMapping);
+            var sourceURLs = cssMapping.sources.map(function(source) {
+              return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */';
+            });
+
+            return [content]
+              .concat(sourceURLs)
+              .concat([sourceMapping])
+              .join('\n');
+          }
+
+          return [content].join('\n');
+        }
+
+        // Adapted from convert-source-map (MIT)
+        function toComment(sourceMap) {
+          // eslint-disable-next-line no-undef
+          var base64 = btoa(
+            unescape(encodeURIComponent(JSON.stringify(sourceMap))),
+          );
+          var data =
+            'sourceMappingURL=data:application/json;charset=utf-8;base64,' +
+            base64;
+
+          return '/*# ' + data + ' */';
+        }
+
+        /***/
+      },
+
     /***/ './node_modules/document-ready/index.js':
       /*!**********************************************!*\
   !*** ./node_modules/document-ready/index.js ***!
@@ -2284,6 +2433,534 @@
         };
         process.umask = function() {
           return 0;
+        };
+
+        /***/
+      },
+
+    /***/ './node_modules/style-loader/lib/addStyles.js':
+      /*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+      /*! no static exports found */
+      /***/ function(module, exports, __webpack_require__) {
+        /*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+        var stylesInDom = {};
+
+        var memoize = function(fn) {
+          var memo;
+
+          return function() {
+            if (typeof memo === 'undefined') memo = fn.apply(this, arguments);
+            return memo;
+          };
+        };
+
+        var isOldIE = memoize(function() {
+          // Test for IE <= 9 as proposed by Browserhacks
+          // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+          // Tests for existence of standard globals is to allow style-loader
+          // to operate correctly into non-standard environments
+          // @see https://github.com/webpack-contrib/style-loader/issues/177
+          return window && document && document.all && !window.atob;
+        });
+
+        var getTarget = function(target) {
+          return document.querySelector(target);
+        };
+
+        var getElement = (function(fn) {
+          var memo = {};
+
+          return function(target) {
+            // If passing function in options, then use it for resolve "head" element.
+            // Useful for Shadow Root style i.e
+            // {
+            //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+            // }
+            if (typeof target === 'function') {
+              return target();
+            }
+            if (typeof memo[target] === 'undefined') {
+              var styleTarget = getTarget.call(this, target);
+              // Special case to return head of iframe instead of iframe itself
+              if (
+                window.HTMLIFrameElement &&
+                styleTarget instanceof window.HTMLIFrameElement
+              ) {
+                try {
+                  // This will throw an exception if access to iframe is blocked
+                  // due to cross-origin restrictions
+                  styleTarget = styleTarget.contentDocument.head;
+                } catch (e) {
+                  styleTarget = null;
+                }
+              }
+              memo[target] = styleTarget;
+            }
+            return memo[target];
+          };
+        })();
+
+        var singleton = null;
+        var singletonCounter = 0;
+        var stylesInsertedAtTop = [];
+
+        var fixUrls = __webpack_require__(
+          /*! ./urls */ './node_modules/style-loader/lib/urls.js',
+        );
+
+        module.exports = function(list, options) {
+          if (typeof DEBUG !== 'undefined' && DEBUG) {
+            if (typeof document !== 'object')
+              throw new Error(
+                'The style-loader cannot be used in a non-browser environment',
+              );
+          }
+
+          options = options || {};
+
+          options.attrs =
+            typeof options.attrs === 'object' ? options.attrs : {};
+
+          // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+          // tags it will allow on a page
+          if (!options.singleton && typeof options.singleton !== 'boolean')
+            options.singleton = isOldIE();
+
+          // By default, add <style> tags to the <head> element
+          if (!options.insertInto) options.insertInto = 'head';
+
+          // By default, add <style> tags to the bottom of the target
+          if (!options.insertAt) options.insertAt = 'bottom';
+
+          var styles = listToStyles(list, options);
+
+          addStylesToDom(styles, options);
+
+          return function update(newList) {
+            var mayRemove = [];
+
+            for (var i = 0; i < styles.length; i++) {
+              var item = styles[i];
+              var domStyle = stylesInDom[item.id];
+
+              domStyle.refs--;
+              mayRemove.push(domStyle);
+            }
+
+            if (newList) {
+              var newStyles = listToStyles(newList, options);
+              addStylesToDom(newStyles, options);
+            }
+
+            for (var i = 0; i < mayRemove.length; i++) {
+              var domStyle = mayRemove[i];
+
+              if (domStyle.refs === 0) {
+                for (var j = 0; j < domStyle.parts.length; j++)
+                  domStyle.parts[j]();
+
+                delete stylesInDom[domStyle.id];
+              }
+            }
+          };
+        };
+
+        function addStylesToDom(styles, options) {
+          for (var i = 0; i < styles.length; i++) {
+            var item = styles[i];
+            var domStyle = stylesInDom[item.id];
+
+            if (domStyle) {
+              domStyle.refs++;
+
+              for (var j = 0; j < domStyle.parts.length; j++) {
+                domStyle.parts[j](item.parts[j]);
+              }
+
+              for (; j < item.parts.length; j++) {
+                domStyle.parts.push(addStyle(item.parts[j], options));
+              }
+            } else {
+              var parts = [];
+
+              for (var j = 0; j < item.parts.length; j++) {
+                parts.push(addStyle(item.parts[j], options));
+              }
+
+              stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts };
+            }
+          }
+        }
+
+        function listToStyles(list, options) {
+          var styles = [];
+          var newStyles = {};
+
+          for (var i = 0; i < list.length; i++) {
+            var item = list[i];
+            var id = options.base ? item[0] + options.base : item[0];
+            var css = item[1];
+            var media = item[2];
+            var sourceMap = item[3];
+            var part = { css: css, media: media, sourceMap: sourceMap };
+
+            if (!newStyles[id])
+              styles.push((newStyles[id] = { id: id, parts: [part] }));
+            else newStyles[id].parts.push(part);
+          }
+
+          return styles;
+        }
+
+        function insertStyleElement(options, style) {
+          var target = getElement(options.insertInto);
+
+          if (!target) {
+            throw new Error(
+              "Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.",
+            );
+          }
+
+          var lastStyleElementInsertedAtTop =
+            stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+          if (options.insertAt === 'top') {
+            if (!lastStyleElementInsertedAtTop) {
+              target.insertBefore(style, target.firstChild);
+            } else if (lastStyleElementInsertedAtTop.nextSibling) {
+              target.insertBefore(
+                style,
+                lastStyleElementInsertedAtTop.nextSibling,
+              );
+            } else {
+              target.appendChild(style);
+            }
+            stylesInsertedAtTop.push(style);
+          } else if (options.insertAt === 'bottom') {
+            target.appendChild(style);
+          } else if (
+            typeof options.insertAt === 'object' &&
+            options.insertAt.before
+          ) {
+            var nextSibling = getElement(
+              options.insertInto + ' ' + options.insertAt.before,
+            );
+            target.insertBefore(style, nextSibling);
+          } else {
+            throw new Error(
+              "[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n",
+            );
+          }
+        }
+
+        function removeStyleElement(style) {
+          if (style.parentNode === null) return false;
+          style.parentNode.removeChild(style);
+
+          var idx = stylesInsertedAtTop.indexOf(style);
+          if (idx >= 0) {
+            stylesInsertedAtTop.splice(idx, 1);
+          }
+        }
+
+        function createStyleElement(options) {
+          var style = document.createElement('style');
+
+          if (options.attrs.type === undefined) {
+            options.attrs.type = 'text/css';
+          }
+
+          addAttrs(style, options.attrs);
+          insertStyleElement(options, style);
+
+          return style;
+        }
+
+        function createLinkElement(options) {
+          var link = document.createElement('link');
+
+          if (options.attrs.type === undefined) {
+            options.attrs.type = 'text/css';
+          }
+          options.attrs.rel = 'stylesheet';
+
+          addAttrs(link, options.attrs);
+          insertStyleElement(options, link);
+
+          return link;
+        }
+
+        function addAttrs(el, attrs) {
+          Object.keys(attrs).forEach(function(key) {
+            el.setAttribute(key, attrs[key]);
+          });
+        }
+
+        function addStyle(obj, options) {
+          var style, update, remove, result;
+
+          // If a transform function was defined, run it on the css
+          if (options.transform && obj.css) {
+            result = options.transform(obj.css);
+
+            if (result) {
+              // If transform returns a value, use that instead of the original css.
+              // This allows running runtime transformations on the css.
+              obj.css = result;
+            } else {
+              // If the transform function returns a falsy value, don't add this css.
+              // This allows conditional loading of css
+              return function() {
+                // noop
+              };
+            }
+          }
+
+          if (options.singleton) {
+            var styleIndex = singletonCounter++;
+
+            style = singleton || (singleton = createStyleElement(options));
+
+            update = applyToSingletonTag.bind(null, style, styleIndex, false);
+            remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+          } else if (
+            obj.sourceMap &&
+            typeof URL === 'function' &&
+            typeof URL.createObjectURL === 'function' &&
+            typeof URL.revokeObjectURL === 'function' &&
+            typeof Blob === 'function' &&
+            typeof btoa === 'function'
+          ) {
+            style = createLinkElement(options);
+            update = updateLink.bind(null, style, options);
+            remove = function() {
+              removeStyleElement(style);
+
+              if (style.href) URL.revokeObjectURL(style.href);
+            };
+          } else {
+            style = createStyleElement(options);
+            update = applyToTag.bind(null, style);
+            remove = function() {
+              removeStyleElement(style);
+            };
+          }
+
+          update(obj);
+
+          return function updateStyle(newObj) {
+            if (newObj) {
+              if (
+                newObj.css === obj.css &&
+                newObj.media === obj.media &&
+                newObj.sourceMap === obj.sourceMap
+              ) {
+                return;
+              }
+
+              update((obj = newObj));
+            } else {
+              remove();
+            }
+          };
+        }
+
+        var replaceText = (function() {
+          var textStore = [];
+
+          return function(index, replacement) {
+            textStore[index] = replacement;
+
+            return textStore.filter(Boolean).join('\n');
+          };
+        })();
+
+        function applyToSingletonTag(style, index, remove, obj) {
+          var css = remove ? '' : obj.css;
+
+          if (style.styleSheet) {
+            style.styleSheet.cssText = replaceText(index, css);
+          } else {
+            var cssNode = document.createTextNode(css);
+            var childNodes = style.childNodes;
+
+            if (childNodes[index]) style.removeChild(childNodes[index]);
+
+            if (childNodes.length) {
+              style.insertBefore(cssNode, childNodes[index]);
+            } else {
+              style.appendChild(cssNode);
+            }
+          }
+        }
+
+        function applyToTag(style, obj) {
+          var css = obj.css;
+          var media = obj.media;
+
+          if (media) {
+            style.setAttribute('media', media);
+          }
+
+          if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+          } else {
+            while (style.firstChild) {
+              style.removeChild(style.firstChild);
+            }
+
+            style.appendChild(document.createTextNode(css));
+          }
+        }
+
+        function updateLink(link, options, obj) {
+          var css = obj.css;
+          var sourceMap = obj.sourceMap;
+
+          /*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+          var autoFixUrls =
+            options.convertToAbsoluteUrls === undefined && sourceMap;
+
+          if (options.convertToAbsoluteUrls || autoFixUrls) {
+            css = fixUrls(css);
+          }
+
+          if (sourceMap) {
+            // http://stackoverflow.com/a/26603875
+            css +=
+              '\n/*# sourceMappingURL=data:application/json;base64,' +
+              btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) +
+              ' */';
+          }
+
+          var blob = new Blob([css], { type: 'text/css' });
+
+          var oldSrc = link.href;
+
+          link.href = URL.createObjectURL(blob);
+
+          if (oldSrc) URL.revokeObjectURL(oldSrc);
+        }
+
+        /***/
+      },
+
+    /***/ './node_modules/style-loader/lib/urls.js':
+      /*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+      /*! no static exports found */
+      /***/ function(module, exports) {
+        /**
+         * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+         * embed the css on the page. This breaks all relative urls because now they are relative to a
+         * bundle instead of the current page.
+         *
+         * One solution is to only use full urls, but that may be impossible.
+         *
+         * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+         *
+         * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+         *
+         */
+
+        module.exports = function(css) {
+          // get current location
+          var location = typeof window !== 'undefined' && window.location;
+
+          if (!location) {
+            throw new Error('fixUrls requires window.location');
+          }
+
+          // blank or null?
+          if (!css || typeof css !== 'string') {
+            return css;
+          }
+
+          var baseUrl = location.protocol + '//' + location.host;
+          var currentDir =
+            baseUrl + location.pathname.replace(/\/[^\/]*$/, '/');
+
+          // convert each url(...)
+          /*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+          var fixedCss = css.replace(
+            /url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi,
+            function(fullMatch, origUrl) {
+              // strip quotes (if they exist)
+              var unquotedOrigUrl = origUrl
+                .trim()
+                .replace(/^"(.*)"$/, function(o, $1) {
+                  return $1;
+                })
+                .replace(/^'(.*)'$/, function(o, $1) {
+                  return $1;
+                });
+
+              // already a full url? no change
+              if (
+                /^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(
+                  unquotedOrigUrl,
+                )
+              ) {
+                return fullMatch;
+              }
+
+              // convert the url to a full url
+              var newUrl;
+
+              if (unquotedOrigUrl.indexOf('//') === 0) {
+                //TODO: should we add protocol?
+                newUrl = unquotedOrigUrl;
+              } else if (unquotedOrigUrl.indexOf('/') === 0) {
+                // path should be relative to the base url
+                newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+              } else {
+                // path should be relative to current directory
+                newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ''); // Strip leading './'
+              }
+
+              // send back the fixed url(...)
+              return 'url(' + JSON.stringify(newUrl) + ')';
+            },
+          );
+
+          // send back the fixed css
+          return fixedCss;
         };
 
         /***/
@@ -3053,103 +3730,35 @@
         /***/
       },
 
-    /***/ './src/css/episode-list.css':
-      /*!**********************************!*\
-  !*** ./src/css/episode-list.css ***!
-  \**********************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/episode-single.css':
-      /*!************************************!*\
-  !*** ./src/css/episode-single.css ***!
-  \************************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/footer.css':
-      /*!****************************!*\
-  !*** ./src/css/footer.css ***!
-  \****************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/header.css':
-      /*!****************************!*\
-  !*** ./src/css/header.css ***!
-  \****************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/home.css':
-      /*!**************************!*\
-  !*** ./src/css/home.css ***!
-  \**************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/icons.css':
-      /*!***************************!*\
-  !*** ./src/css/icons.css ***!
-  \***************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/listen-on.css':
-      /*!*******************************!*\
-  !*** ./src/css/listen-on.css ***!
-  \*******************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/rich-text.css':
-      /*!*******************************!*\
-  !*** ./src/css/rich-text.css ***!
-  \*******************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
-    /***/ './src/css/social.css':
-      /*!****************************!*\
-  !*** ./src/css/social.css ***!
-  \****************************/
-      /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
-        /***/
-      },
-
     /***/ './src/css/style.css':
       /*!***************************!*\
   !*** ./src/css/style.css ***!
   \***************************/
       /*! no static exports found */
-      /***/ function(module, exports) {
-        // removed by extract-text-webpack-plugin
+      /***/ function(module, exports, __webpack_require__) {
+        var content = __webpack_require__(
+          /*! !../../node_modules/css-loader??ref--5-1!../../node_modules/postcss-loader/lib??ref--5-2!./style.css */ './node_modules/css-loader/index.js??ref--5-1!./node_modules/postcss-loader/lib/index.js??ref--5-2!./src/css/style.css',
+        );
+
+        if (typeof content === 'string') content = [[module.i, content, '']];
+
+        var transform;
+        var insertInto;
+
+        var options = { hmr: true };
+
+        options.transform = transform;
+        options.insertInto = undefined;
+
+        var update = __webpack_require__(
+          /*! ../../node_modules/style-loader/lib/addStyles.js */ './node_modules/style-loader/lib/addStyles.js',
+        )(content, options);
+
+        if (content.locals) module.exports = content.locals;
+
+        if (false) {
+        }
+
         /***/
       },
 
@@ -3167,11 +3776,11 @@
 
         var _documentReady2 = _interopRequireDefault(_documentReady);
 
-        var _headerGradient = __webpack_require__(
-          /*! ./header-gradient/ */ './src/js/header-gradient/index.js',
+        var _scrollVariable = __webpack_require__(
+          /*! ./scroll-variable/ */ './src/js/scroll-variable/index.js',
         );
 
-        var _headerGradient2 = _interopRequireDefault(_headerGradient);
+        var _scrollVariable2 = _interopRequireDefault(_scrollVariable);
 
         __webpack_require__(/*! ./style */ './src/js/style.js');
 
@@ -3179,40 +3788,101 @@
           return obj && obj.__esModule ? obj : { default: obj };
         }
 
+        var initScrolls = function initScrolls() {
+          var headerFallback =
+            '\n    background: rgba(255, 255, 255, var(--header-background-opacity));\n  ';
+
+          var navFallback = '\n    opacity: --nav-opacity;\n  ';
+
+          var footerFallback =
+            '\n    transform: translateY(var(--footer-position));\n  ';
+
+          var headerScroll = new _scrollVariable2.default({
+            selector: '#header',
+            from: '350',
+            to: '450',
+            fallbackStyle: headerFallback,
+            props: {
+              '--header-background-opacity': {
+                from: '0.0',
+                to: '1.0',
+              },
+            },
+          });
+
+          var navScroll = new _scrollVariable2.default({
+            selector: '#header nav',
+            from: '450',
+            to: '500',
+            fallbackStyle: navFallback,
+            props: {
+              '--nav-opacity': {
+                from: '0.0',
+                to: '1.0',
+              },
+            },
+          });
+
+          var footerScroll = new _scrollVariable2.default({
+            selector: '#footer',
+            from: '350',
+            to: '450',
+            fallbackStyle: footerFallback,
+            props: {
+              '--footer-position': {
+                from: '100%',
+                to: '0%',
+              },
+            },
+          });
+
+          headerScroll.init();
+          navScroll.init();
+          footerScroll.init();
+        };
+
+        var handleClick = function handleClick(e, node) {
+          if (node.classList.contains('active')) return;
+
+          e.preventDefault();
+          var active = document.querySelector('.active');
+          if (active) {
+            active.classList.remove('active');
+          }
+
+          node.classList.add('active');
+          node.scrollIntoView({
+            behavior: 'instant',
+            block: 'start',
+            inline: 'end',
+          });
+          window.scrollBy(0, -75);
+        };
+
         (0, _documentReady2.default)(function() {
-          var header = new _headerGradient2.default('#header');
-          header.init();
+          initScrolls();
 
           var episodes = Array.from(
             document.querySelectorAll('.episode-single'),
           );
-
-          var handleClick = function handleClick(e) {
-            /* e.preventDefault(); */
-            var active = document.querySelector('.active');
-            if (active) {
-              active.classList.remove('active');
-            }
-            e.currentTarget.classList.add('active');
-            e.currentTarget.scrollIntoView({
-              behavior: 'instant',
-              block: 'start',
-              inline: 'end',
-            });
-            window.scrollBy(0, -75);
-          };
-
           episodes.forEach(function(node) {
-            node.addEventListener('click', handleClick);
+            var elCover = node.querySelector('.episode-cover');
+            var elTitle = node.querySelector('.episode-title');
+            elCover.addEventListener('click', function(e) {
+              handleClick(e, node);
+            });
+            elTitle.addEventListener('click', function(e) {
+              handleClick(e, node);
+            });
           });
         });
 
         /***/
       },
 
-    /***/ './src/js/header-gradient/index.js':
+    /***/ './src/js/scroll-variable/index.js':
       /*!*****************************************!*\
-  !*** ./src/js/header-gradient/index.js ***!
+  !*** ./src/js/scroll-variable/index.js ***!
   \*****************************************/
       /*! no static exports found */
       /***/ function(module, exports, __webpack_require__) {
@@ -3267,61 +3937,53 @@
           }
         }
 
-        var gradientBG =
-          '\n  background: rgba(255, 255, 255, var(--header-background-opacity));\n';
+        var ScrollVariable = (function() {
+          function ScrollVariable(_ref) {
+            var selector = _ref.selector,
+              from = _ref.from,
+              to = _ref.to,
+              props = _ref.props,
+              fallbackStyle = _ref.fallbackStyle;
 
-        var HeaderGradient = (function() {
-          function HeaderGradient(selector) {
-            _classCallCheck(this, HeaderGradient);
+            _classCallCheck(this, ScrollVariable);
 
             this.el = document.querySelector(selector);
+            this.props = props;
+            this.from = from;
+            this.to = to;
+            this.fallbackStyle = fallbackStyle;
             this.init = this.init.bind(this);
           }
 
-          _createClass(HeaderGradient, [
+          _createClass(ScrollVariable, [
             {
               key: 'init',
               value: function init() {
-                var el = this.el;
+                var el = this.el,
+                  props = this.props,
+                  from = this.from,
+                  to = this.to,
+                  fallbackStyle = this.fallbackStyle;
 
-                el.setAttribute('style', gradientBG);
+                el.setAttribute('style', fallbackStyle);
 
                 this.instance = basicScroll.create({
                   elem: el,
-                  from: '350',
-                  to: '450',
+                  from: from,
+                  to: to,
+                  props: props,
                   direct: true,
-                  props: {
-                    '--header-background-opacity': {
-                      from: '0.0',
-                      to: '1.0',
-                    },
-                  },
-                });
-
-                this.instanceNav = basicScroll.create({
-                  elem: document.querySelector('#header nav'),
-                  from: '450',
-                  to: '500',
-                  direct: true,
-                  props: {
-                    '--nav-opacity': {
-                      from: '0.0',
-                      to: '1.0',
-                    },
-                  },
                 });
 
                 this.instance.start();
-                this.instanceNav.start();
               },
             },
           ]);
 
-          return HeaderGradient;
+          return ScrollVariable;
         })();
 
-        exports.default = HeaderGradient;
+        exports.default = ScrollVariable;
 
         /***/
       },
@@ -3336,30 +3998,17 @@
 
         __webpack_require__(/*! ../css/style.css */ './src/css/style.css');
 
-        __webpack_require__(/*! ../css/icons.css */ './src/css/icons.css');
+        /***/
+      },
 
-        __webpack_require__(
-          /*! ../css/rich-text.css */ './src/css/rich-text.css',
-        );
-
-        __webpack_require__(/*! ../css/header.css */ './src/css/header.css');
-
-        __webpack_require__(/*! ../css/footer.css */ './src/css/footer.css');
-
-        __webpack_require__(/*! ../css/social.css */ './src/css/social.css');
-
-        __webpack_require__(
-          /*! ../css/listen-on.css */ './src/css/listen-on.css',
-        );
-
-        __webpack_require__(/*! ../css/home.css */ './src/css/home.css');
-
-        __webpack_require__(
-          /*! ../css/episode-single.css */ './src/css/episode-single.css',
-        );
-
-        __webpack_require__(
-          /*! ../css/episode-list.css */ './src/css/episode-list.css',
+    /***/ 0:
+      /*!*****************************!*\
+  !*** multi ./src/js/app.js ***!
+  \*****************************/
+      /*! no static exports found */
+      /***/ function(module, exports, __webpack_require__) {
+        module.exports = __webpack_require__(
+          /*! ./src/js/app.js */ './src/js/app.js',
         );
 
         /***/
@@ -3368,4 +4017,4 @@
     /******/
   },
 );
-//# sourceMappingURL=main.map
+//# sourceMappingURL=app.map

@@ -1,36 +1,40 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const DEV = process.env.NODE_ENV !== 'production';
+const dist = path.resolve(__dirname, './public');
 
 module.exports = {
+  mode: DEV ? 'development' : 'production',
   devtool: 'cheap-module-source-map',
-  entry: './src/js/app.js',
+  entry: {
+    app: ['./src/js/app.js'],
+  },
+
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public/js/'),
+    filename: '[name].js',
+    path: path.resolve(__dirname, dist),
     sourceMapFilename: '[name].map',
   },
+
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       {
         test: /\.css$/,
-        exclude: /(node_modules|bower_components)/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                url: false,
-              },
-            },
-            {
-              loader: 'postcss-loader',
-            },
-          ],
-        }),
+        use: [
+          DEV ? 'style-loader' : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+        ],
       },
     ],
   },
-  plugins: [new ExtractTextPlugin('../css/[name].css')],
+
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
+  ],
 };

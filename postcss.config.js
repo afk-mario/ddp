@@ -1,5 +1,10 @@
 module.exports = {
   plugins: {
-    'postcss-cssnext': {},
+    'postcss-import': {},
+    'postcss-cssnext': {
+      features: {
+        customProperties: { preserve: true },
+      },
+    },
   },
 };

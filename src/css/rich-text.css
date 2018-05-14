@@ -17,12 +17,12 @@
 }
 
 .rich-text *::selection {
-  color: var(--color1);
+  color: var(--dark-gray);
   background: var(--highlight-soft);
 }
 
 .rich-text *::-moz-selection {
-  color: var(--color1);
+  color: var(--dark-gray);
   background: var(--highlight-soft);
 }
 
@@ -34,7 +34,7 @@
 
 .rich-text ul li {
   font-size: 1em;
-  max-width: var(--max-text-width);
+  max-width: var(--max-width);
   line-height: 1.8em;
   margin: 0 0 var(--half-margin) 0;
   box-sizing: border-box;
@@ -89,7 +89,7 @@
 }
 
 .rich-text pre {
-  background-color: var(--gray1);
+  background-color: var(--light-gray);
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -126,10 +126,10 @@
 }
 
 .rich-text a {
-  color: var(--color1);
+  color: var(--dark-gray);
   box-sizing: border-box;
   position: relative;
-  background: $gray1;
+  background: $light-gray;
   z-index: 2;
 }
 
@@ -137,7 +137,7 @@
   width: 0%;
   height: 100%;
   z-index: -1;
-  background: var(--gray1);
+  background: var(--light-gray);
   content: '';
   position: absolute;
   bottom: 0;
@@ -146,7 +146,7 @@
 
 .rich-text a:hover,
 .rich-text a.active {
-  color: var(--color1);
+  color: var(--dark-gray);
 }
 
 .rich-text a:hover::before,

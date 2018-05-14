@@ -6,9 +6,6 @@ const bodyParser = require('body-parser');
 const errorHandler = require('errorhandler');
 const methodOverride = require('method-override');
 
-const app = express();
-const routes = require('./routes');
-
 require('dotenv').config({
   path: path.resolve(__dirname, '.env'),
   silent: true,
@@ -16,12 +13,14 @@ require('dotenv').config({
 
 const PORT = parseInt(process.env.PORT, 10) || 8000;
 const DEV = process.env.NODE_ENV !== 'production';
+const app = express();
+const routes = require('./routes');
+
+const publicPath = path.resolve(__dirname, './public');
 
 app.set('view engine', 'ejs');
 
-app.use(express.static(path.resolve(__dirname, './public')));
-
-app.use('*', routes);
+app.use(express.static(publicPath));
 
 app.use(methodOverride());
 
@@ -38,7 +37,9 @@ app.use(
   }),
 );
 
-app.listen(PORT, '0.0.0.0', err => {
+app.use('/', routes);
+
+app.listen(PORT, err => {
   const info = `==> Listening on port ${PORT}. Open up http://0.0.0.0:${PORT}/ DEV: ${DEV}`;
   if (err) {
     console.error(err);

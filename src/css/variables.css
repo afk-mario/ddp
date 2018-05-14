@@ -22,6 +22,7 @@
 
   --header-background-opacity: 0;
   --footer-background-opacity: 1;
+  --footer-position: 100%;
   --nav-opacity: 0;
 
   --gradient-pink-blue: linear-gradient(
