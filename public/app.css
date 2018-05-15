@@ -249,9 +249,17 @@ a:hover i {
 .rich-text a {
   color: #1d1d1d;
   color: var(--dark-gray);
+  font-weight: bolder;
+  border-bottom: 4px solid #e8e8e8;
+  border-bottom: 4px solid var(--light-gray);
   position: relative;
-  background: $light-gray;
   z-index: 2;
+  text-decoration: none;
+}
+.rich-text a,
+.rich-text a:before {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .rich-text a:before {
   width: 0;
@@ -262,8 +270,9 @@ a:hover i {
   content: '';
   position: absolute;
   bottom: 0;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+}
+.rich-text a:hover {
+  border-color: #000;
 }
 .rich-text a.active,
 .rich-text a:hover {
@@ -288,6 +297,10 @@ a:hover i {
   }
   .rich-text h3 {
     font-size: 1.1em;
+  }
+  .rich-text a {
+    border-bottom: 2px solid #e8e8e8;
+    border-bottom: 2px solid var(--light-gray);
   }
 }
 #header {
@@ -561,17 +574,8 @@ a:hover i {
   font-size: 1.2em;
 }
 .main-about .description a {
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 4px solid #e8e8e8;
-  border-bottom: 4px solid var(--light-gray);
   color: #000;
   color: var(--black);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.main-about .description a:hover {
-  border-color: #000;
 }
 @media screen and (max-width: 40em) {
   .main-about .wrapper {
@@ -662,17 +666,8 @@ a:hover i {
   margin-bottom: 0;
 }
 .acerca-de .rich-text a {
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 4px solid #e8e8e8;
-  border-bottom: 4px solid var(--light-gray);
   color: #000;
   color: var(--black);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.acerca-de .rich-text a:hover {
-  border-color: #000;
 }
 .podcast-links {
   display: -webkit-box;
@@ -749,10 +744,6 @@ a:hover i {
     padding: 20px 10px;
     padding: var(--margin) var(--half-margin);
   }
-  .acerca-de .rich-text a {
-    border-bottom: 2px solid #e8e8e8;
-    border-bottom: 2px solid var(--light-gray);
-  }
 }
 .e404 {
   margin: 0;
@@ -800,6 +791,29 @@ a:hover i {
   color: var(--black);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+.episode-single a.episode-title {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.episode-single a.episode-title:before {
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  background: #e8e8e8;
+  background: var(--light-gray);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.episode-single a.episode-title:hover:before {
+  width: 100%;
+  background: rgba(245, 255, 0, 0.5);
+  background: var(--highlight-soft);
 }
 .episode-single a.episode-title:hover h2 {
   border-color: #000;

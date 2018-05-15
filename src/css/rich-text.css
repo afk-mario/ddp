@@ -127,10 +127,13 @@
 
 .rich-text a {
   color: var(--dark-gray);
+  font-weight: bolder;
+  border-bottom: 4px solid var(--light-gray);
   box-sizing: border-box;
   position: relative;
-  background: $light-gray;
   z-index: 2;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .rich-text a::before {
@@ -142,6 +145,10 @@
   position: absolute;
   bottom: 0;
   transition: all 0.2s ease;
+}
+
+.rich-text a:hover {
+  border-color: black;
 }
 
 .rich-text a:hover,
@@ -167,5 +174,9 @@
   }
   .rich-text h3 {
     font-size: 1.1em;
+  }
+
+  .rich-text a {
+    border-bottom: 2px solid var(--light-gray);
   }
 }

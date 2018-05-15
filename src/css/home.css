@@ -40,15 +40,7 @@
 }
 
 .main-about .description a {
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 4px solid var(--light-gray);
   color: var(--black);
-  transition: all 0.2s ease;
-}
-
-.main-about .description a:hover {
-  border-color: black;
 }
 
 @media screen and (max-width: 40em) {

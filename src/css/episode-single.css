@@ -19,6 +19,28 @@
   transition: all 0.2s ease;
 }
 
+.episode-single a.episode-title {
+  position: relative;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+.episode-single a.episode-title::before {
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  background: var(--light-gray);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transition: all 0.2s ease;
+}
+
+.episode-single a.episode-title:hover::before {
+  width: 100%;
+  background: var(--highlight-soft);
+}
+
 .episode-single a.episode-title:hover h2 {
   border-color: black;
 }
