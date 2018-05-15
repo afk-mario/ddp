@@ -85,7 +85,7 @@
     width: 25px;
   }
 
-  #header nav {
-    /* margin-left: 25px; */
+  #header nav a {
+    font-size: 1.1em;
   }
 }

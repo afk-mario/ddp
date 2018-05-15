@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body class="container">
+        <%- include('../partials/header', { podcast: podcast }); %>
+        <main class='article-single-main'>
+            <div class="wrapper">
+                <div class="article-info">
+                    <h1><%= single.title %></h1>
+                    <div class="article-data">
+                        <span class="article-date hide-desktop">
+                        <%= single.frmtDateMobile %>
+                        </span>
+                        <span class="article-date hide-mobile">
+                        <%= single.frmtDateDesktop %>
+                        </span>
+                    </div>
+                </div>
+                <div class="rich-text">
+                    <%- single.md %>
+                 </div>
+            </div>
+        </main>
+
+        <%- include('../partials/footer', { podcast: podcast }); %>
+    </body>
+</html>

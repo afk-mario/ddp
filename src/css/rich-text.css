@@ -60,7 +60,7 @@
 }
 
 .rich-text h2 {
-  margin: 10px 0 10px 0;
+  margin: var(--margin) 0 var(--margin) 0;
 }
 
 .rich-text h3 {
