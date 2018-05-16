@@ -17,8 +17,19 @@
                             Un podcast <a href="/acerca-de">acerca de</a> lo que pasa detrás del desarrollo de videojuegos, conducido por <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/afk_mcz">Mario Carballo Zama</a>.
                         </p>
                         <p>
-                            Puedes escucharlo en <a rel="noopener noreferrer" target="_blank" href="http://feeds.ellugar.co/detras-del-pixel" class="itunes">
-                                iTunes</a>, o suscribirte por <a rel="noopener noreferrer" target="_blank" href="http://feeds.ellugar.co/detras-del-pixel" class="rss">rss</a>
+                            Puedes escucharlo en
+                            <a
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href="<%= podcast.iTunesURL %>"
+                                class="itunes"
+                                >iTunes</a>, o suscribirte por
+                            <a
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href="<%= podcast.feedBurner %>"
+                                class="rss"
+                                >rss</a>
                         </p>
                     </div>
                 </div>
@@ -30,7 +41,7 @@
                         className: i === 0 ? 'active' : '',
                         podcast: podcast
                     }); %>
-                <% }); %>
+            <% }); %>
             </section>
         </main>
 
