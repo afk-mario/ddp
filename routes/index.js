@@ -3,30 +3,15 @@
 const express = require('express');
 const got = require('got');
 const Remarkable = require('remarkable');
+const constants = require('../lib/constants');
+const formatBytes = require('../lib/utils');
+const sitemap = require('../lib/sitemap');
 
 const md = new Remarkable();
 
 const router = express.Router();
-const API_ROOT = 'https://api.ellugar.co/';
-const API_URL = `${API_ROOT}podcast/json/`;
-const API_SINGLE = `${API_URL}podcast/1/`;
-const API_LIST = `${API_URL}episodes/detras-del-pixel/`;
-const API_BLOG_LIST = `${API_ROOT}diary/posts/?tags__name=detras-del-pixel`;
-const DEFAULT_META = {
-  title: 'Detrás del Pixel',
-  description: 'Sitio web para detrás del pixel',
-  preview_url: 'https://detrasdelpixel.com/img/preview.jpg',
-};
 
-function formatBytes(bytes, decimals) {
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const dm = decimals || 2;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  const num = parseFloat((bytes / Math.pow(k, i)).toFixed(dm));
-  return `${num} ${sizes[i]}`;
-}
+const { API_SINGLE, API_LIST, API_BLOG_LIST, DEFAULT_META } = constants;
 
 router.get('/', async (req, res) => {
   try {
@@ -227,6 +212,16 @@ router.get('/articulo/:slug', async (req, res) => {
   } catch (error) {
     console.error(error);
   }
+});
+
+router.get('/sitemap.xml', (req, res) => {
+  sitemap.toXML((err, xml) => {
+    if (err) {
+      return res.status(500).end();
+    }
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  });
 });
 
 router.get('*', async (req, res) => {
