@@ -42,8 +42,7 @@
 .main-about .description a {
   color: var(--black);
 }
-
-@media screen and (max-width: 40em) {
+@media (--small-screen) {
   .main-about .wrapper {
     margin: 0 auto var(--margin) auto;
   }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>google-podcast</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="google-podcast">
+            <polygon id="Shape" points="0 0 25 0 25 25 0 25"></polygon>
+            <g id="Group" transform="translate(0.390625, 0.390625)" fill-rule="nonzero">
+                <circle id="Oval" fill="#FFFFFF" cx="12.109375" cy="12.109375" r="12.0878906"></circle>
+                <path d="M12.109375,0.14765625 C18.7632812,0.14765625 24.1640625,5.52695313 24.1972656,12.175 L24.1972656,12.1148437 C24.1972656,5.4390625 18.7851562,0.02734375 12.109375,0.02734375 C5.43359375,0.021484375 0.021484375,5.43320312 0.021484375,12.109375 L0.021484375,12.1699219 C0.054296875,5.52695312 5.45546875,0.14765625 12.109375,0.14765625 Z" id="Shape" fill-opacity="0.2" fill="#FFFFFF"></path>
+                <path d="M12.109375,24.0710938 C18.7632812,24.0710938 24.1640625,18.6917969 24.1972656,12.04375 L24.1972656,12.1039063 C24.1972656,18.7796875 18.7851562,24.1914062 12.109375,24.1914062 C5.43359375,24.1972656 0.021484375,18.7855469 0.021484375,12.109375 L0.021484375,12.0488281 C0.054296875,18.6917969 5.45546875,24.0710938 12.109375,24.0710938 Z" id="Shape" fill-opacity="0.15" fill="#263238"></path>
+                <g transform="translate(3.867578, 3.867578)">
+                    <polygon id="Shape" fill="#FAB908" points="7.21171875 5.24492187 7.21171875 11.2382812 9.271875 11.2382812 9.271875 5.24492187"></polygon>
+                    <circle id="Oval" fill="#0066D9" cx="1.03007812" cy="7.6796875" r="1.03007812"></circle>
+                    <circle id="Oval" fill="#0066D9" cx="1.03007812" cy="8.80351562" r="1.03007812"></circle>
+                    <polygon id="Shape" fill="#0066D9" points="0 7.6796875 2.06054688 7.6796875 2.06054688 8.80351562 0 8.80351562"></polygon>
+                    <circle id="Oval" fill="#4285F4" cx="15.453125" cy="8.80351562" r="1.03007812"></circle>
+                    <circle id="Oval" fill="#4285F4" cx="15.453125" cy="7.6796875" r="1.03007812"></circle>
+                    <polygon id="Shape" fill="#4285F4" points="16.4835937 8.80390625 14.4230469 8.80390625 14.4230469 7.6796875 16.4835937 7.6796875"></polygon>
+                    <circle id="Oval" fill="#EA4335" cx="4.5890625" cy="11.0515625" r="1.03007812"></circle>
+                    <circle id="Oval" fill="#EA4335" cx="4.5890625" cy="12.1753906" r="1.03007812"></circle>
+                    <polygon id="Shape" fill="#EA4335" points="3.55898437 11.0515625 5.61953125 11.0515625 5.61953125 12.1753906 3.55898437 12.1753906"></polygon>
+                    <circle id="Oval" fill="#EA4335" cx="4.5890625" cy="4.30820312" r="1.03007812"></circle>
+                    <circle id="Oval" fill="#EA4335" cx="4.5890625" cy="7.9609375" r="1.03007812"></circle>
+                    <polygon id="Shape" fill="#EA4335" points="3.55898437 4.30820313 5.61953125 4.30820313 5.61953125 7.984375 3.55898437 7.984375"></polygon>
+                    <circle id="Oval" fill="#34A853" cx="11.8945312" cy="5.43203125" r="1.03007812"></circle>
+                    <circle id="Oval" fill="#34A853" cx="11.8945312" cy="4.30820312" r="1.03007812"></circle>
+                    <polygon id="Shape" fill="#34A853" points="12.9246094 5.43203125 10.8640625 5.43203125 10.8640625 4.30859375 12.9246094 4.30859375"></polygon>
+                    <g transform="translate(7.031250, 0.000000)" fill="#FAB908">
+                        <circle id="Oval" cx="1.21054687" cy="2.15390625" r="1.03007812"></circle>
+                        <circle id="Oval" cx="1.21054687" cy="1.03007812" r="1.03007812"></circle>
+                        <polygon id="Shape" points="2.240625 2.15429687 0.1796875 2.15429687 0.1796875 1.03046875 2.24023437 1.03046875"></polygon>
+                        <circle id="Oval" cx="1.21054687" cy="15.453125" r="1.03007812"></circle>
+                        <circle id="Oval" cx="1.21054687" cy="14.3292969" r="1.03007812"></circle>
+                        <polygon id="Shape" points="2.240625 15.453125 0.1796875 15.453125 0.1796875 14.3296875 2.24023437 14.3296875"></polygon>
+                    </g>
+                    <circle id="Oval" fill="#34A853" cx="11.8945312" cy="12.1753906" r="1.03007812"></circle>
+                    <circle id="Oval" fill="#34A853" cx="11.8945312" cy="8.52265625" r="1.03007812"></circle>
+                    <polygon id="Shape" fill="#34A853" points="12.9246094 12.1753906 10.8640625 12.1753906 10.8640625 8.52265625 12.9246094 8.52265625"></polygon>
+                    <circle id="Oval" fill="#FAB908" cx="8.24179687" cy="5.24492187" r="1.03007812"></circle>
+                    <circle id="Oval" fill="#FAB908" cx="8.24179687" cy="11.2386719" r="1.03007812"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+/* .google-podcast-circles * { */
+/*   transition: all 0.2s ease; */
+/*   fill: whitesmoke; */
+/* } */
+
+.podcast-links a.google {
+  padding: 7px;
+}
+
+.google:not(:hover) .google-podcast-circles * {
+  fill: #ccc;
+}
+
+.google-podcast-icon {
+  margin-right: 5px;
+  display: inline-block;
+  width: 25px;
+}
+
+@media (--small-screen) {
+  .podcast-links a.google {
+    padding: 2px;
+  }
+}

@@ -41,13 +41,13 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 40em) {
+@media (--small-screen) {
   .hide-mobile {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 40em) {
+@media (--big-screen) {
   .hide-desktop {
     display: none !important;
   }

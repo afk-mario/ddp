@@ -66,7 +66,6 @@
   color: var(--gray);
   transition: all 0.2s ease;
   font-size: 1em;
-  display: inline-block;
   text-align: center;
   padding: var(--half-margin);
   border: 2px solid var(--super-light-gray);
@@ -83,7 +82,13 @@
   text-shadow: none;
 }
 
-@media screen and (max-width: 40em) {
+@media (--medium-screen) {
+  .podcast-links a {
+    font-size: 0.8em;
+  }
+}
+
+@media (--small-screen) {
   .acerca-de .logo {
     width: 100%;
     margin-bottom: var(--margin);
@@ -101,6 +106,7 @@
 
   .podcast-links a {
     padding: 5px;
+    font-size: 1em;
   }
 
   .acerca-de .rich-text {

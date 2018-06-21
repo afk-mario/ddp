@@ -10,6 +10,10 @@
   font-size: 3em;
   margin: 0;
   margin-left: -5px;
+  padding-bottom: var(--quarter-margin);
+  padding-top: var(--margin);
+  border-bottom: 4px solid var(--black);
+  margin-bottom: var(--half-margin);
 }
 
 .article-single-main .rich-text {
@@ -19,7 +23,7 @@
   margin: auto;
   font-size: 1.2em;
   line-height: 1.5em;
-  padding: var(--double-margin);
+  padding: var(--margin);
   background: var(--super-light-gray);
 }
 
@@ -36,7 +40,11 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 40em) {
+.article-data {
+  margin-bottom: var(--margin);
+}
+
+@media (--small-screen) {
   .article-single-main .wrapper {
     width: 100%;
   }

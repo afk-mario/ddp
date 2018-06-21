@@ -1,20 +1,31 @@
 <footer id="footer">
     <div class="wrapper">
         <ul class="listen-on">
-            <li class="rss">
+            <li>
                 <a
                     rel="noopener noreferrer"
                     target="_blank"
+                    class="rss"
                     href="<%= podcast.feedBurner %>">
                     <i class="fas fa-rss"></i>rss
                 </a>
             </li>
-            <li class="itunes">
+            <li>
                 <a 
                     rel="noopener noreferrer"
                     target="_blank"
+                    class="itunes"
                     href="<%= podcast.iTunesURL %>">
                     <i class="fas fa-podcast"></i>iTunes
+                </a>
+            </li>
+            <li>
+                <a 
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="icon google"
+                    href="<%= podcast.googlePodcast %>">
+                    <% include ../partials/google %><span>Google</span>
                 </a>
             </li>
         </ul>

@@ -162,7 +162,7 @@
   background: var(--highlight-soft);
 }
 
-@media screen and (max-width: 40em) {
+@media (--small-screen) {
   .rich-text ul li {
     width: 100%;
   }

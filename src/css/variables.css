@@ -2,6 +2,7 @@
   --wrapper-width: 85%;
   --margin: 20px;
   --half-margin: calc(20px / 2);
+  --quarter-margin: calc(20px / 4);
   --double-margin: calc(20px * 2);
 
   --max-width: 800px;
@@ -58,4 +59,8 @@
     rgba(0, 174, 255, 1) 20%,
     rgba(29, 29, 29, 1) 20%
   );
+
+  @custom-media --small-screen (width <= 670px);
+  @custom-media --medium-screen (width <= 1000px);
+  @custom-media --big-screen (width > 1200px);
 }
