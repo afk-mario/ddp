@@ -89,12 +89,12 @@ ul {
 a {
   text-decoration: none;
 }
-@media (max-width: 670px) {
+@media screen and (max-width: 40em) {
   .hide-mobile {
     display: none !important;
   }
 }
-@media (min-width: 1201px) {
+@media screen and (min-width: 40em) {
   .hide-desktop {
     display: none !important;
   }
