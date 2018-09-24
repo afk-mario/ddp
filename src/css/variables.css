@@ -1,9 +1,9 @@
 :root {
-  --wrapper-width: 85%;
+  --wrapper-width: calc(95% - var(--margin) - 70px - var(--double-margin));
   --margin: 20px;
-  --half-margin: calc(20px / 2);
-  --quarter-margin: calc(20px / 4);
-  --double-margin: calc(20px * 2);
+  --half-margin: calc(var(--margin) / 2);
+  --quarter-margin: calc(var(--margin) / 4);
+  --double-margin: calc(var(--margin) * 2);
 
   --max-width: 800px;
 
@@ -25,6 +25,10 @@
   --footer-background-opacity: 1;
   --footer-position: 0%;
   --nav-opacity: 1;
+
+  --twitter: #059ff6;
+  --facebook: #39579b;
+  --instagram: #fd8400;
 
   --gradient-pink-blue: linear-gradient(
     54deg,
@@ -63,4 +67,7 @@
   @custom-media --small-screen (width <= 670px);
   @custom-media --medium-screen (width <= 1000px);
   @custom-media --big-screen (width < 1200px);
+
+  --font: 'Montserrat', sans-serif;
+  --font-fixed: 'Roboto Mono', monospace;
 }

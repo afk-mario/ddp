@@ -1,9 +1,13 @@
 :root {
-  --wrapper-width: 85%;
+  --wrapper-width: calc(95% - 130px);
+  --wrapper-width: calc(95% - var(--margin) - 70px - var(--double-margin));
   --margin: 20px;
   --half-margin: 10px;
+  --half-margin: calc(var(--margin) / 2);
   --quarter-margin: 5px;
+  --quarter-margin: calc(var(--margin) / 4);
   --double-margin: 40px;
+  --double-margin: calc(var(--margin) * 2);
   --max-width: 800px;
   --black: #000;
   --white: #fff;
@@ -21,6 +25,9 @@
   --footer-background-opacity: 1;
   --footer-position: 0%;
   --nav-opacity: 1;
+  --twitter: #059ff6;
+  --facebook: #39579b;
+  --instagram: #fd8400;
   --gradient-pink-blue: linear-gradient(54deg, #ff3168, #00a5ff);
   --gradient-blue-pink: linear-gradient(30deg, #00a5ff, #ff3168);
   --gradient-ddp: linear-gradient(
@@ -43,12 +50,15 @@
     #00aeff 20%,
     #1d1d1d 0
   );
+  --font: 'Montserrat', sans-serif;
+  --font-fixed: 'Roboto Mono', monospace;
 }
 body,
 html {
   padding: 0;
   margin: 0;
   font-family: Montserrat, sans-serif;
+  font-family: var(--font);
   background: #fff;
   background: var(--white);
 }
@@ -77,7 +87,7 @@ img {
   justify-content: center;
 }
 .wrapper {
-  width: 85%;
+  width: calc(95% - 130px);
   width: var(--wrapper-width);
   max-width: 800px;
   max-width: var(--max-width);
@@ -504,6 +514,31 @@ a:hover i {
   transition: all 0.2s ease;
   font-size: 1.2em;
   display: inline-block;
+  opacity: 0.5;
+}
+.social i.fa-twitter {
+  color: #059ff6;
+  color: var(--twitter);
+}
+.social i.fa-facebook {
+  color: #39579b;
+  color: var(--facebook);
+}
+.social i.fa-instagram {
+  color: #fd8400;
+  color: var(--instagram);
+  background: #fd8400;
+  background: var(--instagram);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .social a i {
   margin: 0;
@@ -513,8 +548,7 @@ a:hover i {
   margin-right: var(--margin);
 }
 .social a:hover {
-  color: #1d1d1d;
-  color: var(--dark-gray);
+  opacity: 1;
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
 }
@@ -756,6 +790,30 @@ a:hover i {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
   text-shadow: none;
+}
+.podcast-links a:hover i.fa-twitter {
+  color: #059ff6;
+  color: var(--twitter);
+}
+.podcast-links a:hover i.fa-facebook {
+  color: #39579b;
+  color: var(--facebook);
+}
+.podcast-links a:hover i.fa-instagram {
+  color: #fd8400;
+  color: var(--instagram);
+  background: #fd8400;
+  background: var(--instagram);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1000px) {
   .podcast-links a {
@@ -1232,18 +1290,72 @@ a:hover i {
   }
 }
 .episode-list {
-  width: 85%;
+  width: calc(95% - 130px);
   width: var(--wrapper-width);
   max-width: 800px;
   max-width: var(--max-width);
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+}
+.episode-list,
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sidebar {
+  font-family: Roboto Mono, monospace;
+  font-family: var(--font-fixed);
+  padding-bottom: 60px;
+  font-size: 0.8em;
+  -webkit-box-flex: column;
+  -ms-flex: column;
+  flex: column;
+  position: absolute;
+  top: 60px;
+  top: calc(var(--double-margin) + var(--margin));
+  left: calc(10px + 2.5%);
+  left: calc(var(--half-margin) + 2.5%);
+  z-index: 10;
+}
+.sidebar li {
+  list-style: none;
+}
+.sidebar a {
+  display: block;
+  text-align: center;
+  width: 30px;
+  overflow: hidden;
+  color: #a8a8a8;
+  color: var(--gray);
+  padding: 5px;
+  padding: var(--quarter-margin);
+  border: 2px solid #e8e8e8;
+  border: 2px solid var(--light-gray);
+  border-radius: 50%;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  background: var(--white);
+  -webkit-transition: width 0.2s ease, color 0.2s ease, border 0.2s ease;
+  transition: width 0.2s ease, color 0.2s ease, border 0.2s ease;
+  -webkit-transition: all 0.2 ease;
+  transition: all 0.2 ease;
+}
+.sidebar a:hover {
+  width: auto;
+  color: #000;
+  color: var(--black);
+  border-color: #000;
+  border-color: var(--black);
+  border-radius: 10px;
+}
+.sidebar li:not(:last-child) {
+  margin-bottom: 5px;
+  margin-bottom: var(--quarter-margin);
 }
 
 /*# sourceMappingURL=app.map*/

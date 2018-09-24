@@ -1,0 +1,12 @@
+<aside class="sidebar">
+    <ul>
+    <% list.reverse().forEach(function(episode, i){ %>
+        <li>
+            <a
+                href="/episodio/<%= episode.slug %>">
+                <%= episode.title %>
+            </a>
+        </li>
+    <% }); %>
+    </ul>
+</aside>

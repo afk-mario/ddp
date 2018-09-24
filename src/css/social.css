@@ -10,6 +10,30 @@
   transition: all 0.2s ease;
   font-size: 1.2em;
   display: inline-block;
+  opacity: 0.5;
+}
+
+.social i.fa-twitter {
+  color: var(--twitter);
+}
+
+.social i.fa-facebook {
+  color: var(--facebook);
+}
+
+.social i.fa-instagram {
+  color: var(--instagram);
+  background: var(--instagram);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .social a i {
@@ -21,7 +45,8 @@
 }
 
 .social a:hover {
-  color: var(--dark-gray);
+  /* color: var(--dark-gray); */
+  opacity: 1;
   transform: translateY(-1px);
 }
 

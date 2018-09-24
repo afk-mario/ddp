@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "start": "NODE_ENV=production node ./index.js",
-    "start:dev": "NODE_ENV=development nodemon --ext '.js|.ejs' ./index.js",
+    "start:dev": "NODE_ENV=development nodemon --ext '.js|.ejs'",
     "start:prod": "NODE_ENV=production node ./index.js",
     "build:dev": "webpack --watch --progress --mode=development",
     "build:prod": "webpack -p",

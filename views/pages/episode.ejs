@@ -5,6 +5,7 @@
     </head>
     <body class="container">
         <%- include('../partials/header', { podcast: podcast }); %>
+        <%- include('../partials/sidebar', {list: list}); %>
         <main class='episode-main'>
             <div class="wrapper">
                 <%- include('../partials/episode-single', {

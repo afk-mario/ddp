@@ -8,6 +8,7 @@
     </head>
     <body class="container">
         <%- include('../partials/header', { podcast: podcast }); %>
+        <%- include('../partials/sidebar', {list: list}); %>
         <main class="home">
             <section id="parallax-bg-first" class="main-about">
                 <div class="wrapper">
@@ -41,7 +42,7 @@
                 </div>
             </section>
             <section class="episode-list">
-                <% list.forEach(function(episode, i){ %>
+                <% list.reverse().forEach(function(episode, i){ %>
                     <%- include('../partials/episode-single', {
                         episode: episode,
                         className: i === 0 ? 'active' : '',

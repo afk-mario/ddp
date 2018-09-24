@@ -82,6 +82,29 @@
   text-shadow: none;
 }
 
+.podcast-links a:hover i.fa-twitter {
+  color: var(--twitter);
+}
+
+.podcast-links a:hover i.fa-facebook {
+  color: var(--facebook);
+}
+
+.podcast-links a:hover i.fa-instagram {
+  color: var(--instagram);
+  background: var(--instagram);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (--medium-screen) {
   .podcast-links a {
     font-size: 0.8em;
