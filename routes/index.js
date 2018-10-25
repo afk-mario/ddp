@@ -13,31 +13,35 @@ const router = express.Router();
 
 const { API_SINGLE, API_LIST, API_BLOG_LIST, DEFAULT_META } = constants;
 
+const dateConfigMobile = {
+  year: '2-digit',
+  month: '2-digit',
+  day: '2-digit',
+};
+
+const dateConfigDesktop = {
+  year: '2-digit',
+  month: 'short',
+  day: '2-digit',
+};
+
 router.get('/', async (req, res) => {
   try {
     const podcastRequest = await got(API_SINGLE, { json: true });
     const listRequest = await got(API_LIST, { json: true });
     const podcast = podcastRequest.body;
-    const list = listRequest.body.reverse().map(episode =>
-      Object.assign(episode, {
-        md: md.render(episode.text),
-        frmtDateMobile: new Date(episode.dateCreated).toLocaleDateString(
+    const list = listRequest.body.reverse().map(item =>
+      Object.assign(item, {
+        md: md.render(item.text),
+        frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
-          {
-            year: '2-digit',
-            month: '2-digit',
-            day: '2-digit',
-          },
+          dateConfigMobile,
         ),
-        frmtDateDesktop: new Date(episode.dateCreated).toLocaleDateString(
+        frmtDateDesktop: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
-          {
-            year: '2-digit',
-            month: 'short',
-            day: '2-digit',
-          },
+          dateConfigDesktop,
         ),
-        frmtSize: formatBytes(episode.audio_size),
+        frmtSize: formatBytes(item.audio_size),
       }),
     );
     const single = list[0];
@@ -57,29 +61,21 @@ router.get('/episodio/:slug', async (req, res) => {
     const podcastRequest = await got(API_SINGLE, { json: true });
     const listRequest = await got(API_LIST, { json: true });
     const podcast = podcastRequest.body;
-    const list = listRequest.body.reverse().map(episode =>
-      Object.assign(episode, {
-        md: md.render(episode.text),
-        frmtDateMobile: new Date(episode.dateCreated).toLocaleDateString(
+    const list = listRequest.body.reverse().map(item =>
+      Object.assign(item, {
+        md: md.render(item.text),
+        frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
-          {
-            year: '2-digit',
-            month: '2-digit',
-            day: '2-digit',
-          },
+          dateConfigMobile,
         ),
-        frmtDateDesktop: new Date(episode.dateCreated).toLocaleDateString(
+        frmtDateDesktop: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
-          {
-            year: '2-digit',
-            month: 'short',
-            day: '2-digit',
-          },
+          dateConfigDesktop,
         ),
-        frmtSize: formatBytes(episode.audio_size),
+        frmtSize: formatBytes(item.audio_size),
       }),
     );
-    const single = list.find(episode => episode.slug === req.params.slug);
+    const single = list.find(item => item.slug === req.params.slug);
 
     if (!single) {
       res.status(404);
@@ -127,25 +123,18 @@ router.get('/blog', async (req, res) => {
   const podcastRequest = await got(API_SINGLE, { json: true });
   const listRequest = await got(API_BLOG_LIST, { json: true });
   const podcast = podcastRequest.body;
-  const list = listRequest.body.map(article =>
-    Object.assign(article, {
-      md: md.render(article.text),
-      frmtDateMobile: new Date(article.dateCreated).toLocaleDateString(
+  const list = listRequest.body.map(item =>
+    Object.assign(item, {
+      md: md.render(item.text),
+      frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
         'es-mx',
-        {
-          year: '2-digit',
-          month: '2-digit',
-          day: '2-digit',
-        },
+        dateConfigMobile,
       ),
-      frmtDateDesktop: new Date(article.dateCreated).toLocaleDateString(
+      frmtDateDesktop: new Date(item.dateCreated).toLocaleDateString(
         'es-mx',
-        {
-          year: '2-digit',
-          month: 'short',
-          day: '2-digit',
-        },
+        dateConfigDesktop,
       ),
+      frmtSize: formatBytes(item.audio_size),
     }),
   );
   podcast.md = md.render(podcast.text);
@@ -154,32 +143,25 @@ router.get('/blog', async (req, res) => {
   res.render('pages/article-list', context);
 });
 
-router.get('/articulo/:slug', async (req, res) => {
+router.get('/blog/:slug', async (req, res) => {
   try {
     const podcastRequest = await got(API_SINGLE, { json: true });
     const listRequest = await got(API_BLOG_LIST, { json: true });
     const podcast = podcastRequest.body;
-    const list = listRequest.body.map(article =>
-      Object.assign(article, {
-        md: md.render(article.text),
-        frmtDateMobile: new Date(article.dateCreated).toLocaleDateString(
+    const list = listRequest.body.map(item =>
+      Object.assign(item, {
+        md: md.render(item.text),
+        frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
-          {
-            year: '2-digit',
-            month: '2-digit',
-            day: '2-digit',
-          },
+          dateConfigMobile,
         ),
-        frmtDateDesktop: new Date(article.dateCreated).toLocaleDateString(
+        frmtDateDesktop: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
-          {
-            year: '2-digit',
-            month: 'short',
-            day: '2-digit',
-          },
+          dateConfigDesktop,
         ),
       }),
     );
+
     podcast.md = md.render(podcast.text);
     const single = list.find(article => article.slug === req.params.slug);
 

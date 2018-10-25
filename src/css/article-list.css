@@ -4,40 +4,32 @@
 
 .article-list-main > .wrapper {
   margin: auto;
+  padding-top: var(--double-margin);
+  width: 80%;
+  max-width: none;
 }
 
-.article-list-main a h2 {
-  margin-bottom: var(--margin);
-  text-decoration: none;
-  border-bottom: 4px solid var(--light-gray);
-  color: var(--black);
-  transition: all 0.2s ease;
-  padding: var(--margin) 0 var(--half-margin) 0;
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--margin);
 }
 
-.article-list-main a {
-  position: relative;
-  display: block;
-  z-index: 2;
-  transition: all 0.2s ease;
+.articles-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--double-margin);
 }
 
-.article-list-main a::before {
-  width: 0%;
-  height: 100%;
-  z-index: -1;
-  background: var(--light-gray);
-  content: '';
-  position: absolute;
-  bottom: 0;
-  transition: all 0.2s ease;
+.articles-info h1 {
+  font-size: 5em;
+  margin: 0;
+  margin-right: 0px;
+  margin-right: var(--double-margin);
 }
 
-.article-list-main a:hover::before {
-  width: 100%;
-  background: var(--highlight-soft);
-}
-
-.article-list-main a:hover h2 {
-  border-color: black;
+.articles-info p {
+  font-size: 1.2em;
+  margin: 0;
 }

@@ -8,8 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "NODE_ENV=production node ./index.js",
-    "start:dev": "NODE_ENV=development nodemon --ext '.js|.ejs'",
+    "start:dev": "nodemon --ignore src index.js",
     "start:prod": "NODE_ENV=production node ./index.js",
     "build:dev": "webpack --watch --progress --mode=development",
     "build:prod": "webpack -p",
@@ -46,6 +45,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
     "mini-css-extract-plugin": "^0.4.0",
+    "nodemon": "^1.18.4",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.4",

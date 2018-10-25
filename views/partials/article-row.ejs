@@ -1,7 +1,25 @@
 <div class="article-row <%= className %>">
+    <div class="img-wrapper">
+        <img src="/img/illustration.png" alt="">
+    </div>
     <div class="article-info">
-        <a href="/articulo/<%= article.slug %>" class="article-title">
-            <h2><%= article.title %></h2>
-        </a>
+        <div class="height-wrapper">
+            <a href="/blog/<%= article.slug %>">
+                <h2><%= article.title %></h2>
+            </a>
+            <div class="article-data">
+                <a href="/blog/<%= article.slug %>">
+                    <span class="article-date hide-desktop">
+                        <%= article.frmtDateMobile %>
+                    </span>
+                    <span class="article-date hide-mobile">
+                        <%= article.frmtDateDesktop %>
+                    </span>
+                </a>
+            </div>
+            <div class="rich-text">
+                <%- article.md %>
+            </div>
+        </div>
     </div>
 </div>
