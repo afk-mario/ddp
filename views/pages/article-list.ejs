@@ -13,7 +13,7 @@
                     <h1 class="main-title">Blog</h1>
                     <div class="blog-description">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum gravida consectetur. Mauris vitae nibh aliquam diam bibendum scelerisque. Aenean aliquet tellus a urna viverra, vel porttitor nisl pulvinar. Donec vitae metus enim. Curabitur ut sapien aliquet, euismod quam ac, pulvinar odio. In eu odio dapibus, tincidunt diam non, interdum mi. Pellentesque vitae mollis lorem. Nullam eu convallis lorem. Etiam gravida tempor mauris et feugiat. Fusce rhoncus non arcu non condimentum.
+                            El Blog de Detrás del Pixel, esta dedicado a escribir sobre todo lo que pasa detrás de la industria de videojuegos.
                         </p>
                     </div>
                 </div>
@@ -23,19 +23,7 @@
                             article: article,
                             className: i === 0 ? 'active' : '',
                         }); %>
-                <% }); %>
-                <% list.forEach(function(article, i){ %>
-                    <%- include('../partials/article-row', {
-                        article: article,
-                        className: i === 0 ? 'active' : '',
-                    }); %>
-            <% }); %>
-            <% list.forEach(function(article, i){ %>
-                <%- include('../partials/article-row', {
-                    article: article,
-                    className: i === 0 ? 'active' : '',
-                }); %>
-        <% }); %>
+                    <% }); %>
                 </section>
             </div>
         </main>

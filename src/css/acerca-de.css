@@ -1,5 +1,5 @@
 .acerca-de {
-  margin: calc(var(--double-margin) + var(--margin)) 0 var(--double-margin) 0;
+  margin: var(--4-margin) 0 var(--double-margin) 0;
 }
 
 .acerca-de > .wrapper {
@@ -27,7 +27,7 @@
   margin: auto;
   font-size: 1.5em;
   line-height: 1.5em;
-  padding: var(--double-margin);
+  padding: var(--margin);
   background: var(--super-light-gray);
 }
 

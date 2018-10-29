@@ -1,5 +1,5 @@
 .article-list-main {
-  margin: calc(var(--double-margin) + var(--margin)) 0 var(--double-margin) 0;
+  margin: var(--double-margin) 0 var(--double-margin) 0;
 }
 
 .article-list-main > .wrapper {
@@ -32,4 +32,22 @@
 .articles-info p {
   font-size: 1.2em;
   margin: 0;
+}
+@media screen and (max-width: 60em) {
+  .article-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .articles-info {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .articles-info h1 {
+    margin-bottom: var(--margin);
+  }
+  .article-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -3,6 +3,8 @@
 const express = require('express');
 const got = require('got');
 const Remarkable = require('remarkable');
+const truncate = require('truncate');
+
 const constants = require('../lib/constants');
 const formatBytes = require('../lib/utils');
 const sitemap = require('../lib/sitemap');
@@ -119,13 +121,22 @@ router.get('/acerca-de', async (req, res) => {
   res.render('pages/about', context);
 });
 
+router.get('/faq', async (req, res) => {
+  const podcastRequest = await got(API_SINGLE, { json: true });
+  const podcast = podcastRequest.body;
+  podcast.md = md.render(podcast.faq);
+
+  const context = { ...DEFAULT_META, podcast };
+  res.render('pages/faq', context);
+});
+
 router.get('/blog', async (req, res) => {
   const podcastRequest = await got(API_SINGLE, { json: true });
   const listRequest = await got(API_BLOG_LIST, { json: true });
   const podcast = podcastRequest.body;
-  const list = listRequest.body.map(item =>
+  const list = listRequest.body.map((item, i) =>
     Object.assign(item, {
-      md: md.render(item.text),
+      md: md.render(truncate(item.text, i === 0 ? 400 : 140)),
       frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
         'es-mx',
         dateConfigMobile,

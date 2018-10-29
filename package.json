@@ -28,7 +28,8 @@
     "got": "^8.3.0",
     "method-override": "^2.3.10",
     "remarkable": "^1.7.1",
-    "sitemap": "^1.13.0"
+    "sitemap": "^1.13.0",
+    "truncate": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

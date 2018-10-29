@@ -4,6 +4,7 @@
   --half-margin: calc(var(--margin) / 2);
   --quarter-margin: calc(var(--margin) / 4);
   --double-margin: calc(var(--margin) * 2);
+  --4-margin: calc(var(--margin) * 4);
 
   --max-width: 800px;
 

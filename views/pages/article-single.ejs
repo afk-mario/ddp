@@ -18,7 +18,9 @@
                         </span>
                     </div>
                 </div>
-                <img src="/img/illustration.png" alt="">
+                <%if (single.mainImage) { %>
+                        <img src="<%= single.mainImage %>" alt="">
+                <% } %>
                 <div class="rich-text">
                     <%- single.md %>
                  </div>

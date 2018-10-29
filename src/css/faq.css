@@ -1,0 +1,30 @@
+.faq-page {
+  margin: var(--4-margin) 0 var(--double-margin) 0;
+}
+
+.faq-page > .wrapper {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-page .logo {
+  width: 35%;
+  min-height: 200px;
+  max-width: 800px;
+  background: var(--light-gray);
+  max-width: var(--max-width);
+  border: var(--half-margin) solid var(--super-light-gray);
+  margin-bottom: var(--double-margin);
+}
+
+.faq-page .rich-text {
+  background: var(--super-light-gray);
+  padding: var(--margin);
+}
+
+.faq-page .rich-text > :first-child {
+  margin-top: 0;
+}
