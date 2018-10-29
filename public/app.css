@@ -489,15 +489,15 @@ a:hover i {
   transform: translateY(-2px);
   text-shadow: none;
 }
-#header nav .about:hover i {
+#header nav .blog:hover i {
   color: #ff3168;
   color: var(--highlight-pink);
 }
-#header nav .blog:hover i {
+#header nav .faq:hover i {
   color: #000000;
   color: var(--black);
 }
-#header nav .faq:hover i {
+#header nav .about:hover i {
   color: #00a5ff;
   color: var(--highlight-blue);
 }

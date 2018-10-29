@@ -62,15 +62,15 @@
   text-shadow: none;
 }
 
-#header nav .about:hover i {
+#header nav .blog:hover i {
   color: var(--highlight-pink);
 }
 
-#header nav .blog:hover i {
+#header nav .faq:hover i {
   color: var(--black);
 }
 
-#header nav .faq:hover i {
+#header nav .about:hover i {
   color: var(--highlight-blue);
 }
 
