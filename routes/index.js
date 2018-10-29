@@ -105,6 +105,7 @@ router.get('/episodio/:slug', async (req, res) => {
     context.title = single.title;
     context.description = single.small_text;
     context.preview_url = single.image;
+    context.url = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
 
     res.render('pages/episode', context);
   } catch (error) {
@@ -203,6 +204,8 @@ router.get('/blog/:slug', async (req, res) => {
     context.preview_url = single.mainImage
       ? single.mainImage
       : DEFAULT_META.preview_url;
+
+    context.url = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
 
     res.render('pages/article-single', context);
   } catch (error) {
