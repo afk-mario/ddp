@@ -206,6 +206,7 @@ router.get('/blog/:slug', async (req, res) => {
       : DEFAULT_META.preview_url;
 
     context.url = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+    context.description = truncate(single.text, 140);
 
     res.render('pages/article-single', context);
   } catch (error) {
