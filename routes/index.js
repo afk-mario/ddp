@@ -200,6 +200,9 @@ router.get('/blog/:slug', async (req, res) => {
     const context = { ...DEFAULT_META, podcast, list, single };
 
     context.title = single.title;
+    context.preview_url = single.mainImage
+      ? single.mainImage
+      : DEFAULT_META.preview_url;
 
     res.render('pages/article-single', context);
   } catch (error) {
