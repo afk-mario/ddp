@@ -6,7 +6,7 @@
   margin: auto;
   padding-top: var(--double-margin);
   width: 80%;
-  max-width: none;
+  max-width: var(--max-width-wide);
 }
 
 .article-list {
