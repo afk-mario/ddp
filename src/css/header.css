@@ -108,6 +108,10 @@
     font-size: 0.7em;
   }
 
+  #header .ellugar img {
+    height: 10px;
+  }
+
   #header .mini-logo {
     width: 25px;
   }
