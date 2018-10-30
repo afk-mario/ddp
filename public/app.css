@@ -1078,9 +1078,10 @@ a:hover i {
   border: 2px solid #e8e8e8;
   border: 2px solid var(--light-gray);
   border-bottom: none;
-  height: 500px;
+  min-height: 500px;
   background-size: 100% auto;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .article-row .rich-text {
   margin: 0;
@@ -1093,6 +1094,10 @@ a:hover i {
 @media screen and (max-width: 40em) {
   .article-row:first-child {
     grid-column: auto;
+  }
+  .article-row .img-wrapper {
+    min-height: 200px;
+    background-size: cover;
   }
 }
 .article-single-main {
