@@ -939,6 +939,14 @@ a:hover i {
 .faq-page .rich-text > :first-child {
   margin-top: 0;
 }
+@media (max-width: 670px) {
+  .faq-page .logo {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-bottom: var(--margin);
+    border: none;
+  }
+}
 .article-list-main {
   margin: 40px 0;
   margin: var(--double-margin) 0;
