@@ -40,6 +40,10 @@
 }
 
 @media screen and (max-width: 40em) {
+  .article-list-main > .wrapper {
+    width: 90%;
+  }
+
   .articles-info {
     flex-flow: column;
     align-items: flex-start;

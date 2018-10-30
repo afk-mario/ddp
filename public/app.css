@@ -986,6 +986,9 @@ a:hover i {
   }
 }
 @media screen and (max-width: 40em) {
+  .article-list-main > .wrapper {
+    width: 90%;
+  }
   .articles-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
