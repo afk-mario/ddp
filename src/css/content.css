@@ -60,3 +60,9 @@ a {
     display: none !important;
   }
 }
+
+@media screen and (max-width: 40em) {
+  .wrapper {
+    width: 90%;
+  }
+}

@@ -5,3 +5,9 @@
   display: flex;
   flex-flow: column nowrap;
 }
+
+@media (--small-screen) {
+  .episode-list {
+    width: 85%;
+  }
+}
