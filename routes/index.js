@@ -2,14 +2,15 @@
 
 const express = require('express');
 const got = require('got');
-const Remarkable = require('remarkable');
+const Showdown = require('showdown');
+const ShowdownYT = require('showdown-youtube');
 const truncate = require('truncate');
 
 const constants = require('../lib/constants');
 const formatBytes = require('../lib/utils');
 const sitemap = require('../lib/sitemap');
 
-const md = new Remarkable();
+const md = new Showdown.Converter({ extensions: ['youtube'] });
 
 const router = express.Router();
 
@@ -34,7 +35,7 @@ router.get('/', async (req, res) => {
     const podcast = podcastRequest.body;
     const list = listRequest.body.reverse().map(item =>
       Object.assign(item, {
-        md: md.render(item.text),
+        md: md.makeHtml(item.text),
         frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
           dateConfigMobile,
@@ -65,7 +66,7 @@ router.get('/episodio/:slug', async (req, res) => {
     const podcast = podcastRequest.body;
     const list = listRequest.body.reverse().map(item =>
       Object.assign(item, {
-        md: md.render(item.text),
+        md: md.makeHtml(item.text),
         frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
           dateConfigMobile,
@@ -116,7 +117,7 @@ router.get('/episodio/:slug', async (req, res) => {
 router.get('/acerca-de', async (req, res) => {
   const podcastRequest = await got(API_SINGLE, { json: true });
   const podcast = podcastRequest.body;
-  podcast.md = md.render(podcast.text);
+  podcast.md = md.makeHtml(podcast.text);
 
   const context = { ...DEFAULT_META, podcast };
   res.render('pages/about', context);
@@ -125,7 +126,7 @@ router.get('/acerca-de', async (req, res) => {
 router.get('/faq', async (req, res) => {
   const podcastRequest = await got(API_SINGLE, { json: true });
   const podcast = podcastRequest.body;
-  podcast.md = md.render(podcast.faq);
+  podcast.md = md.makeHtml(podcast.faq);
 
   const context = { ...DEFAULT_META, podcast };
   res.render('pages/faq', context);
@@ -137,7 +138,7 @@ router.get('/blog', async (req, res) => {
   const podcast = podcastRequest.body;
   const list = listRequest.body.map((item, i) =>
     Object.assign(item, {
-      md: md.render(truncate(item.text, i === 0 ? 400 : 140)),
+      md: md.makeHtml(truncate(item.text, i === 0 ? 400 : 140)),
       frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
         'es-mx',
         dateConfigMobile,
@@ -149,7 +150,7 @@ router.get('/blog', async (req, res) => {
       frmtSize: formatBytes(item.audio_size),
     }),
   );
-  podcast.md = md.render(podcast.text);
+  podcast.md = md.makeHtml(podcast.text);
 
   const context = { ...DEFAULT_META, podcast, list };
   res.render('pages/article-list', context);
@@ -162,7 +163,7 @@ router.get('/blog/:slug', async (req, res) => {
     const podcast = podcastRequest.body;
     const list = listRequest.body.map(item =>
       Object.assign(item, {
-        md: md.render(item.text),
+        md: md.makeHtml(item.text),
         frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
           'es-mx',
           dateConfigMobile,
@@ -174,7 +175,7 @@ router.get('/blog/:slug', async (req, res) => {
       }),
     );
 
-    podcast.md = md.render(podcast.text);
+    podcast.md = md.makeHtml(podcast.text);
     const single = list.find(article => article.slug === req.params.slug);
 
     if (!single) {
