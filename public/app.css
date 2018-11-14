@@ -499,7 +499,9 @@ a:hover i {
   #header .mini-logo {
     width: 30px;
   }
-
+  #header .ellugar img {
+    width: 10px;
+  }
   #header nav li:not(:last-child) {
     margin-right: 10px;
     margin-right: var(--half-margin);
@@ -509,7 +511,9 @@ a:hover i {
   #header {
     font-size: 0.7em;
   }
-
+  #header .ellugar img {
+    height: 10px;
+  }
   #header .mini-logo {
     width: 25px;
   }
@@ -1510,21 +1514,26 @@ a:hover i {
   max-width: 800px;
   max-width: var(--max-width);
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
 }
-
-.sidebar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (max-width: 670px) {
+  .episode-list {
+    width: 85%;
+  }
 }
 .sidebar {
   font-family: Roboto Mono, monospace;
   font-family: var(--font-fixed);
   padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 0.8em;
   -webkit-box-flex: column;
   -ms-flex: column;
