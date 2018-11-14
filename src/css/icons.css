@@ -34,3 +34,7 @@ a:hover i {
 .itunes:hover i {
   color: var(--highlight-blue);
 }
+
+.spotify:hover i {
+  color: var(--highlight-green);
+}

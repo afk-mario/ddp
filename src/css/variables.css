@@ -24,6 +24,7 @@
   --highlight-yellow: #fff200;
   --highlight-pink: #ff3168;
   --highlight-blue: #00a5ff;
+  --highlight-green: #17d85f;
 
   --highlight: var(--highlight-yellow);
   --highlight-soft: rgba(245, 255, 0, 0.5);

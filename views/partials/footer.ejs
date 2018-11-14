@@ -2,15 +2,6 @@
     <div class="wrapper">
         <ul class="listen-on">
             <li>
-                <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    class="rss"
-                    href="<%= podcast.feedBurner %>">
-                    <i class="fas fa-rss"></i>rss
-                </a>
-            </li>
-            <li>
                 <a 
                     rel="noopener noreferrer"
                     target="_blank"
@@ -23,9 +14,27 @@
                 <a 
                     rel="noopener noreferrer"
                     target="_blank"
+                    class="spotify"
+                    href="<%= podcast.spotify %>">
+                    <i class="fab fa-spotify"></i>Spotify
+                </a>
+            </li>
+            <li>
+                <a 
+                    rel="noopener noreferrer"
+                    target="_blank"
                     class="icon google"
                     href="<%= podcast.googlePodcast %>">
                     <% include ../partials/google %><span>Google</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="rss"
+                    href="<%= podcast.feedBurner %>">
+                    <i class="fas fa-rss"></i>rss
                 </a>
             </li>
         </ul>
