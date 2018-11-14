@@ -11,6 +11,7 @@
   --4-margin: 80px;
   --4-margin: calc(var(--margin) * 4);
   --max-width: 800px;
+  --max-width-wide: 1024px;
   --black: #000;
   --white: #fff;
   --super-light-gray: #f5f5f5;
@@ -120,6 +121,11 @@ a {
 @media screen and (min-width: 40em) {
   .hide-desktop {
     display: none !important;
+  }
+}
+@media screen and (max-width: 40em) {
+  .wrapper {
+    width: 90%;
   }
 }
 .podcast-links a.google {
@@ -347,6 +353,10 @@ a:hover i {
   background: rgba(245, 255, 0, 0.5);
   background: var(--highlight-soft);
 }
+.rich-text iframe {
+  width: 100%;
+  height: 560px;
+}
 @media (max-width: 670px) {
   .rich-text ul li {
     width: 100%;
@@ -489,6 +499,7 @@ a:hover i {
   #header .mini-logo {
     width: 30px;
   }
+
   #header nav li:not(:last-child) {
     margin-right: 10px;
     margin-right: var(--half-margin);
@@ -498,9 +509,7 @@ a:hover i {
   #header {
     font-size: 0.7em;
   }
-  #header .ellugar img {
-    height: 10px;
-  }
+
   #header .mini-logo {
     width: 25px;
   }
@@ -939,6 +948,14 @@ a:hover i {
 .faq-page .rich-text > :first-child {
   margin-top: 0;
 }
+@media (max-width: 670px) {
+  .faq-page .logo {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-bottom: var(--margin);
+    border: none;
+  }
+}
 .article-list-main {
   margin: 40px 0;
   margin: var(--double-margin) 0;
@@ -948,7 +965,8 @@ a:hover i {
   padding-top: 40px;
   padding-top: var(--double-margin);
   width: 80%;
-  max-width: none;
+  max-width: 1024px;
+  max-width: var(--max-width-wide);
 }
 .article-list {
   display: grid;
@@ -986,6 +1004,9 @@ a:hover i {
   }
 }
 @media screen and (max-width: 40em) {
+  .article-list-main > .wrapper {
+    width: 90%;
+  }
   .articles-info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1061,10 +1082,14 @@ a:hover i {
   padding: var(--margin);
 }
 .article-row .img-wrapper {
-  overflow: hidden;
+  display: block;
   border: 2px solid #e8e8e8;
   border: 2px solid var(--light-gray);
   border-bottom: none;
+  min-height: 500px;
+  background-size: 100% auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .article-row .rich-text {
   margin: 0;
@@ -1077,6 +1102,10 @@ a:hover i {
 @media screen and (max-width: 40em) {
   .article-row:first-child {
     grid-column: auto;
+  }
+  .article-row .img-wrapper {
+    min-height: 200px;
+    background-size: cover;
   }
 }
 .article-single-main {
@@ -1486,7 +1515,7 @@ a:hover i {
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
 }
-.episode-list,
+
 .sidebar {
   display: -webkit-box;
   display: -ms-flexbox;

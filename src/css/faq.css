@@ -28,3 +28,11 @@
 .faq-page .rich-text > :first-child {
   margin-top: 0;
 }
+
+@media (--small-screen) {
+  .faq-page .logo {
+    width: 100%;
+    margin-bottom: var(--margin);
+    border: none;
+  }
+}

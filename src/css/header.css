@@ -98,6 +98,10 @@
     width: 30px;
   }
 
+  #header .ellugar img {
+    width: 10px;
+  }
+
   #header nav li:not(:last-child) {
     margin-right: var(--half-margin);
   }

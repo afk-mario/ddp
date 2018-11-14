@@ -43,13 +43,14 @@
   padding: var(--margin);
 }
 
-.article-row .height-wrapper {
-}
-
 .article-row .img-wrapper {
-  overflow: hidden;
+  display: block;
   border: 2px solid var(--light-gray);
   border-bottom: none;
+  min-height: 500px;
+  background-size: 100% auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .article-row .rich-text {
@@ -64,5 +65,10 @@
 @media screen and (max-width: 40em) {
   .article-row:first-child {
     grid-column: auto;
+  }
+
+  .article-row .img-wrapper {
+    min-height: 200px;
+    background-size: cover;
   }
 }

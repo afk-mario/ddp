@@ -1,8 +1,6 @@
 <div class="article-row <%= className %>">
     <%if (article.mainImage) { %>
-        <a href="/blog/<%= article.slug %>" class="img-wrapper">
-            <img src="<%= article.mainImage %>" alt="">
-        </a>
+        <a href="/blog/<%= article.slug %>" class="img-wrapper" style="background-image: url(<%= article.mainImage %>)"></a>
     <% } %>
     <div class="article-info">
         <div class="height-wrapper">
