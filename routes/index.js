@@ -3,18 +3,23 @@
 const express = require('express');
 const got = require('got');
 const Showdown = require('showdown');
-const ShowdownYT = require('showdown-youtube');
 const truncate = require('truncate');
 
 const constants = require('../lib/constants');
 const formatBytes = require('../lib/utils');
 const sitemap = require('../lib/sitemap');
 
-const md = new Showdown.Converter({ extensions: ['youtube'] });
+const md = new Showdown.Converter();
 
 const router = express.Router();
 
-const { API_SINGLE, API_LIST, API_BLOG_LIST, DEFAULT_META } = constants;
+const {
+  API_SINGLE,
+  API_LIST,
+  API_BLOG_LIST,
+  API_BLOG_SINGLE,
+  DEFAULT_META,
+} = constants;
 
 const dateConfigMobile = {
   year: '2-digit',
@@ -157,26 +162,29 @@ router.get('/blog', async (req, res) => {
 });
 
 router.get('/blog/:slug', async (req, res) => {
+  const {
+    params: { slug },
+  } = req;
   try {
     const podcastRequest = await got(API_SINGLE, { json: true });
-    const listRequest = await got(API_BLOG_LIST, { json: true });
+    const singleRequest = await got(`${API_BLOG_SINGLE}${slug}`, {
+      json: true,
+    });
     const podcast = podcastRequest.body;
-    const list = listRequest.body.map(item =>
-      Object.assign(item, {
-        md: md.makeHtml(item.text),
-        frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
-          'es-mx',
-          dateConfigMobile,
-        ),
-        frmtDateDesktop: new Date(item.dateCreated).toLocaleDateString(
-          'es-mx',
-          dateConfigDesktop,
-        ),
-      }),
-    );
+    const item = singleRequest.body;
+    const single = Object.assign(item, {
+      md: md.makeHtml(item.text),
+      frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
+        'es-mx',
+        dateConfigMobile,
+      ),
+      frmtDateDesktop: new Date(item.dateCreated).toLocaleDateString(
+        'es-mx',
+        dateConfigDesktop,
+      ),
+    });
 
     podcast.md = md.makeHtml(podcast.text);
-    const single = list.find(article => article.slug === req.params.slug);
 
     if (!single) {
       res.status(404);
@@ -199,7 +207,7 @@ router.get('/blog/:slug', async (req, res) => {
       return;
     }
 
-    const context = { ...DEFAULT_META, podcast, list, single };
+    const context = { ...DEFAULT_META, podcast, single };
 
     context.title = single.title;
     context.preview_url = single.mainImage
@@ -211,6 +219,23 @@ router.get('/blog/:slug', async (req, res) => {
     res.render('pages/article-single', context);
   } catch (error) {
     console.error(error);
+    res.status(404);
+
+    // respond with html page
+    if (req.accepts('html')) {
+      const context = { ...DEFAULT_META, podcast: {}, url: req.url };
+      res.render('pages/404', context);
+      return;
+    }
+
+    // respond with json
+    if (req.accepts('json')) {
+      res.send({ error: 'Not found' });
+      return;
+    }
+
+    // default to plain-text. send()
+    res.type('txt').send('Not found');
   }
 });
 

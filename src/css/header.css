@@ -83,6 +83,7 @@
 
 #header .ellugar img {
   height: 18px;
+  width: auto;
 }
 
 @media screen and (max-width: 30em) {
