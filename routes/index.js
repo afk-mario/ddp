@@ -143,7 +143,7 @@ router.get('/blog', async (req, res) => {
   const podcast = podcastRequest.body;
   const list = listRequest.body.map((item, i) =>
     Object.assign(item, {
-      md: md.makeHtml(truncate(item.text, i === 0 ? 400 : 140)),
+      md: md.makeHtml(truncate(item.text, i === 0 ? 310 : 140)),
       frmtDateMobile: new Date(item.dateCreated).toLocaleDateString(
         'es-mx',
         dateConfigMobile,

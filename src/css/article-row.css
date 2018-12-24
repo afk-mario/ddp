@@ -1,4 +1,4 @@
-.article-row:not(:first-child) img {
+.article-row:not(:first-child) .img-wrapper {
   display: none;
 }
 
@@ -48,7 +48,7 @@
   border: 2px solid var(--light-gray);
   border-bottom: none;
   min-height: 500px;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -70,5 +70,9 @@
   .article-row .img-wrapper {
     min-height: 200px;
     background-size: cover;
+  }
+
+  .article-row:not(:first-child) .img-wrapper {
+    display: block;
   }
 }
